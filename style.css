@@ -3,4 +3,22 @@
 }
 
 
-verdana font
+.splashback {
+    position: absolute;
+    background-color: aliceblue;
+    height: 800px;
+    width: 800px;
+    z-index: 10;
+}
+
+
+#game {
+    position: relative;
+    background-color: aqua;
+    width: 800px;
+    height: 600px;
+}
+
+#start {
+    color: black;
+}
