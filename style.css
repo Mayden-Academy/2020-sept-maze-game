@@ -28,11 +28,14 @@ html, body {
     height: 600px;
     text-align: center;
 }
+
 .splash-heading h1 {
     padding-top: 20px;
     font-size: 3rem;
     font-family: "ManEaterBold";
+    letter-spacing: 3px;
 }
+
 .splash-outerbox {
     width: 100%;
     height: 80%;
@@ -40,6 +43,7 @@ html, body {
     flex-direction: row;
     justify-content: space-evenly;
 }
+
 .splash-innerbox {
     background-color: #BC5F04;
     display: flex;
@@ -49,7 +53,7 @@ html, body {
     padding: 20px;
     width: 40%;
     height: 100%;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 .game-logo {
@@ -69,7 +73,7 @@ html, body {
     font-weight: normal;
     letter-spacing: 3px;
     font-size: 2rem;
-    margin-bottom: 100px;
+    /*margin-bottom: 70px;*/
 }
 
 .instructionDetails {
