@@ -2,23 +2,132 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Man Eater";
+    src: url("maneater-bb/maneaterbb_reg.ttf");
+}
+
+body {
+    background-color: #2b0504;
+}
+
 h1 {
     text-align: center;
+    color: whitesmoke;
+    font-family: "Man Eater", sans-serif;
 }
 
 .maze {
-    background-color: #000000;
+    background-color: #bc5f04;
     width: 800px;
     height: 600px;
     margin: 0 auto;
+    position: relative;
 }
 
-.start_area {
-    background-color: #ffffff;
-    width: 75px;
-    height: 50px
+.start_area h2 {
+    color: #ffffff;
+    position: absolute;
+    top: 244px;
+    left: 373px;
+    z-index: 10;
+    font-size: 17px;
+}
+
+.start_area img {
+    width: 60px;
+    position: absolute;
+    top: 230px;
+    left: 362px;
 }
 
 .line div {
+    background-color: #ffffff;
+    position: absolute;
+}
 
+.thick {
+    width: 24px;
+}
+
+.thin {
+    width: 14px;
+}
+
+.line_one {
+    top: 347px;
+    left: 375px;
+    height: 100px;
+}
+
+.horizontal {
+    transform: rotate(90deg);
+}
+
+.line_two {
+    top: 336px;
+    left: 267px;
+    height: 239px;
+}
+
+.line_three {
+    top: 93px;
+    left: 138px;
+    height: 375px;
+}
+
+.line_four {
+    top: -34px;
+    left: 242px;
+    height: 233px;
+}
+
+.line_five {
+    top: 71px;
+    left: 347px;
+    height: 100px;
+}
+
+.line_six {
+    top: 102px;
+    left: 415px;
+    height: 150px;
+}
+
+.line_seven {
+    top: 170px;
+    left: 483px;
+    height: 150px;
+}
+
+.line_eight {
+    top: 288px;
+    left: 491px;
+    height: 40px;
+}
+
+.line_nine {
+    top: 254px;
+    left: 565px;
+    height: 109px;
+}
+
+.line_ten {
+    top: 296px;
+    left: 608px;
+    height: 186px;
+}
+
+.line_eleven {
+    top: 423px;
+    left: 649px;
+    height: 100px;
+    width: 18px;
+}
+
+.finish_area img {
+    width: 80px;
+    position: absolute;
+    top: 395px;
+    left: 693px;
 }
