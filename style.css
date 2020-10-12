@@ -1,7 +1,11 @@
 @font-face {
-    font-family: 'ManEater BB';
-    src: url('fonts/maneater-bb/maneaterbb_bold.ttf') format('ttf'),
-    url('fonts/maneater-bb/maneaterbb_reg.ttf') format('ttf');
+    font-family: 'ManEaterBold';
+    src: url('fonts/maneater-bb/maneaterbb_bold.ttf');
+}
+
+@font-face {
+    font-family: 'ManEater';
+    src: url('fonts/maneater-bb/maneaterbb_reg.ttf');
 }
 
 * {
@@ -27,7 +31,7 @@ html, body {
 .splash-heading h1 {
     padding-top: 20px;
     font-size: 3rem;
-    font-family: "ManEater BB";
+    font-family: "ManEaterBold";
 }
 .splash-outerbox {
     width: 100%;
@@ -57,11 +61,13 @@ html, body {
     width: 150px;
     padding: 20px;
     font-size: 2rem;
-    font-family: "ManEater BB";
+    font-family: "ManEater";
 }
 
 .instructionsTitle {
-    font-family: "ManEater BB";
+    font-family: "ManEater";
+    font-weight: normal;
+    letter-spacing: 3px;
     font-size: 2rem;
     margin-bottom: 100px;
 }
