@@ -15,6 +15,11 @@ function startTimer( duration, element) {
             clearInterval(timer)
             console.log('end of game')
         }
+
+        document.querySelector('#finish').addEventListener('mouseenter', ()=>{
+            clearInterval(timer);
+            console.log('youve won');
+        })
     }, 1000)
 }
 let timerRunning = false;
@@ -23,4 +28,3 @@ document.querySelector('#button').addEventListener('mouseout', ()=> {
         startTimer(10, document.querySelector('#timer p'));
     }
 })
-
