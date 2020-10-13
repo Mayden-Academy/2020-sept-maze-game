@@ -1,12 +1,3 @@
-@font-face {
-    font-family: 'ManEaterBold';
-    src: url('fonts/maneater-bb/maneaterbb_bold.ttf');
-}
-
-@font-face {
-    font-family: 'ManEater';
-    src: url('fonts/maneater-bb/maneaterbb_reg.ttf');
-}
 
 * {
     box-sizing: border-box;
