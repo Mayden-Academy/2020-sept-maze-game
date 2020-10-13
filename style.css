@@ -1,0 +1,11 @@
+
+#timer {
+    background-color: #BC5F04;
+    color: white;
+    width: 160px;
+    font-size: 4rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px 8px rgba(0,0,0,0.5);
+    font-family: "Fredericka The Great";
+}
