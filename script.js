@@ -4,27 +4,27 @@
 let winModal = document.querySelector("#gameWinPopup")
 let loseModal = document.querySelector("#gameLosePopup")
 
-// code here to activate win modal displaying // below is what to do when that happens
-    function() {
+// code here to activate win modal displaying
+    let win = function() {
         winModal.style.display = "block"
     }
 
-// code here to activate lose modal displaying // below is what to do when that happens
+// code here to activate lose modal displaying
 
-function() {
-    loseModal.style.display = "block"
+let lose = function() {
+   loseModal.style.display = "block"
 }
 
 // When the user clicks anywhere outside of the modal, close it
+//this isn't working any more...
+// window.addEventListener('click', (event) => {
+//     if (event.target === winModal) {
+//         winModal.style.display = "none"
+//     }
+// })
 
 window.addEventListener('click', (event) => {
-    if (event.target == winModal) {
-        winModal.style.display = "none"
-    }
-})
-
-window.addEventListener('click', (event) => {
-    if (event.target == loseModal) {
+    if (event.target === loseModal) {
         loseModal.style.display = "none"
     }
 })
@@ -42,7 +42,8 @@ function listenForCollisions() {
     document.querySelectorAll('.collision').forEach(item => {
         item.addEventListener('mouseenter', (e) => {
             // console.log('collision mouseOver: Oh dear, you lost as you left the path or collided with a monster!');
-            alert('Oh dear, you lost as you left the path or collided with a monster!');
+            //alert('Oh dear, you lost as you left the path or collided with a monster!');
+            lose()
             e.stopPropagation();
         })
     })
@@ -52,7 +53,8 @@ function listenForCollisions() {
 function listenForWinning() {
     document.querySelector('.winningSquare').addEventListener('mouseover', (e) => {
         // console.log('winningSquare mouseover: Congrats! You made it to the Exit!');
-        alert('Congrats! You made it to the Exit!');
+        //alert('Congrats! You made it to the Exit!');
+        win()
         e.stopPropagation();
     })
 }
