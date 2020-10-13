@@ -40,13 +40,13 @@ html, body {
 }
 
 .start_area h2 {
-    font-family: "Creepster", sans-serif;
+    font-family: sans-serif;
     color: #ffffff;
     position: absolute;
-    top: 244px;
-    left: 367px;
+    top: 250px;
+    left: 379px;
     z-index: 10;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .start_area img {
