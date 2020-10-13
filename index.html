@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>Jarver's Crypt</title>
+    <title>Jarver's Crypt Maze</title>
 </head>
 <body>
-    <div class="splash-main">
+  
+  <!-- splash screen -->
+          
+    <div id="splash-main">
         <div class="splash-heading"><h1>Jarver's Crypt</h1></div>
         <div class="splash-outerbox">
             <div class="splash-innerbox">
@@ -28,5 +31,56 @@
             </div>
         </div>
     </div>
+  
+  <!-- Game screen -->
+  <div id="gameScreen">
+    <h1>Jarver's Crypt</h1>
+    <div class="maze collision">
+        <div id="start" class="start_area">
+            <h2 class="start-label">Start</h2>
+            <img src="images/coffin.png" alt="a coffin">
+        </div>
+        <div class="line">
+            <div class="vertical line_one thick"></div>
+            <div class="horizontal line_two thick"></div>
+            <div class="vertical line_three thick"></div>
+            <div class="horizontal line_four thick"></div>
+            <div class="vertical line_five thick"></div>
+            <div class="horizontal line_six thin"></div>
+            <div class="vertical line_seven thin"></div>
+            <div class="horizontal line_eight thick"></div>
+            <div class="horizontal line_nine thick"></div>
+            <div class="vertical line_ten thick"></div>
+            <div class="horizontal line_eleven"></div>
+        </div>
+        <div class="finish_area">
+            <img src="images/door.png" alt="finish door" class="win">
+        </div>
+
+<!--        images-->
+        <div class="ghost">
+            <img class="ghostImage" src="images/ghost.png" alt="ghost" class="collision">
+        </div>
+        <div class="pumpkin">
+            <img class="pumpkinImage" src="images/pumpkin.png" alt="halloween pumpkin" class="collision">
+        </div>
+        <div class="rock">
+            <img src="images/rock.png" alt="rock">
+        </div>
+        <div class="grim_reaper">
+            <img class="grim_reaperImage" src="images/death.png" alt="grim reaper" class="collision">
+        </div>
+        <div class="cross">
+            <img src="images/cross.png" alt="RIP cross">
+        </div>
+        <div class="gravestone">
+            <img src="images/gravestone.png" alt="gravestone">
+        </div>
+        <div class="tombstone">
+            <img src="images/tombstone.png" alt="tombstone">
+        </div>
+    </div>
+  </div>
 </body>
 </html>
+
