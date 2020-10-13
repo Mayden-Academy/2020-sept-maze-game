@@ -27,9 +27,11 @@ function startAnimation() {
         iterations: Infinity
     });
     pumpkin.animate([
-        {transform: 'translateY(0px)'},
-        {transform: 'translateY(-120px)'},
-        {transform: 'translateY(0px)'}
+        {transform: 'translateX(0px)'},
+        {transform: 'translateX(-120px)'},
+        {transform: 'translate(0px)'},
+        {transform: 'translate(120px)'},
+        {transform: 'translate(0px)'}
     ], {
         // timing options
         duration: 3000,
