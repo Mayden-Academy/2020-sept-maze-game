@@ -58,7 +58,7 @@ html, body {
 .line div {
     background-color: #2b0504;
     position: absolute;
-    cursor: url("images/ghost-cursor.cur"), pointer;
+    cursor: url("images/charPointer.png"), pointer;
 }
 
 .thick {
@@ -145,7 +145,7 @@ html, body {
     position: absolute;
     bottom: 52px;
     right: 27px;
-    cursor: url("images/ghost-cursor.cur"), pointer;
+    cursor: url("images/charPointer.png"), pointer;
 }
 
 .ghost img {
