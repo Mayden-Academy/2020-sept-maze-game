@@ -3,6 +3,7 @@ let img = document.querySelector('.game-logo');
 let start = document.querySelector('.instructionDetails');
 start.addEventListener('mouseleave', (e) => {
     e.stopPropagation()
+    startAnimation()
 })
 
 
@@ -18,4 +19,3 @@ function startAnimation() {
     });
     // 2 more of these
 }
-startAnimation()
