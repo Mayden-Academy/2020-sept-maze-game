@@ -15,6 +15,8 @@ h1 {
     text-align: center;
     color: whitesmoke;
     font-family: "Man Eater", sans-serif;
+    font-size: 4rem;
+    margin: 0.3em 0;
 }
 
 .maze {
@@ -113,14 +115,14 @@ h1 {
 }
 
 .line_ten {
-    top: 296px;
-    left: 608px;
+    bottom: 118px;
+    right: 168px;
     height: 186px;
 }
 
 .line_eleven {
-    top: 423px;
-    left: 649px;
+    bottom: 77px;
+    right: 133px;
     height: 100px;
     width: 18px;
 }
@@ -128,6 +130,35 @@ h1 {
 .finish_area img {
     width: 80px;
     position: absolute;
-    top: 395px;
-    left: 693px;
+    bottom: 52px;
+    right: 27px;
+}
+
+.ghost img {
+    position: absolute;
+    width: 45px;
+    bottom: 163px;
+    left: 239px;
+}
+
+.pumpkin img {
+    position: absolute;
+    width: 45px;
+    top: 107px;
+    left: 239px;
+}
+
+.grim_reaper img {
+    position: absolute;
+    width: 45px;
+    top: 229px;
+    right: 200px;
+}
+
+.rock img {
+    position: absolute;
+    width: 90px;
+    top: 228px;
+    right: 175px;
+    z-index: 10;
 }
