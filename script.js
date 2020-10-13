@@ -1,31 +1,29 @@
 
 // Get the modal
-let modal = document.querySelector("#gameWinPopup")
+let winModal = document.querySelector("#gameWinPopup")
+let loseModal = document.querySelector("#gameLosePopup")
 
-// Get the button that opens the modal if you've won
-let Tempbtn = document.querySelector(".start-button")
+// code here to activate win modal displaying // below is what to do when that happens
+    function() {
+        winModal.style.display = "block"
+    }
 
-// Get the button that closes the modal and restarts the game
-let restartButton = document.querySelector(".restartButton")
+// code here to activate lose modal displaying // below is what to do when that happens
 
-// When the user clicks the start button, open the modal (this needs changing to when the game ends, open modal)
-//eventlistener this!!
-Tempbtn.onclick = function() {
-    modal.style.display = "block"
-}
-
-
-// When the user clicks on (restart button), close the modal
-//eventlistener this!!
-restartButton.onclick = function() {
-    modal.style.display = "none"
-    //startGame Function here
+function() {
+    loseModal.style.display = "block"
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none"
-    }
-}
 
+window.addEventListener('click', (event) => {
+    if (event.target == winModal) {
+        winModal.style.display = "none"
+    }
+})
+
+window.addEventListener('click', (event) => {
+    if (event.target == loseModal) {
+        loseModal.style.display = "none"
+    }
+})
