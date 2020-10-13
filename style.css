@@ -21,6 +21,182 @@ html, body {
     font-family: Verdana, "Comic Sans MS", sans-serif;
 }
 
+#gameScreen h1 {
+    text-align: center;
+    color: whitesmoke;
+    font-family: "ManEater", sans-serif;
+    font-size: 4rem;
+    margin: 0.3em 0;
+}
+
+.maze {
+    background-color: #bc5f04;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.start_area h2 {
+    font-family: "ManEater", sans-serif;
+    color: #ffffff;
+    position: absolute;
+    top: 244px;
+    left: 367px;
+    z-index: 10;
+    font-size: 17px;
+}
+
+.start_area img {
+    width: 60px;
+    position: absolute;
+    top: 230px;
+    left: 362px;
+}
+
+.line div {
+    background-color: #2b0504;
+    position: absolute;
+    cursor: url("images/ghost-cursor.cur"), pointer;
+}
+
+.thick {
+    width: 24px;
+}
+
+.thin {
+    width: 14px;
+}
+
+.line_one {
+    top: 347px;
+    left: 375px;
+    height: 100px;
+}
+
+.horizontal {
+    transform: rotate(90deg);
+}
+
+.line_two {
+    top: 336px;
+    left: 266px;
+    height: 242px;
+}
+
+.line_three {
+    top: 90px;
+    left: 137px;
+    height: 378px;
+}
+
+.line_four {
+    top: -34px;
+    left: 242px;
+    height: 234px;
+}
+
+.line_five {
+    top: 71px;
+    left: 347px;
+    height: 100px;
+}
+
+.line_six {
+    top: 102px;
+    left: 415px;
+    height: 150px;
+}
+
+.line_seven {
+    top: 170px;
+    left: 483px;
+    height: 150px;
+}
+
+.line_eight {
+    top: 288px;
+    left: 491px;
+    height: 40px;
+}
+
+.line_nine {
+    top: 254px;
+    left: 565px;
+    height: 109px;
+}
+
+.line_ten {
+    bottom: 118px;
+    right: 168px;
+    height: 186px;
+}
+
+.line_eleven {
+    bottom: 77px;
+    right: 133px;
+    height: 100px;
+    width: 18px;
+}
+
+.finish_area img {
+    width: 80px;
+    position: absolute;
+    bottom: 52px;
+    right: 27px;
+}
+
+.ghost img {
+    position: absolute;
+    width: 45px;
+    bottom: 163px;
+    left: 239px;
+}
+
+.pumpkin img {
+    position: absolute;
+    width: 45px;
+    top: 107px;
+    left: 233px;
+}
+
+.grim_reaper img {
+    position: absolute;
+    width: 45px;
+    top: 229px;
+    right: 200px;
+}
+
+.rock img {
+    position: absolute;
+    width: 92px;
+    top: 228px;
+    right: 173px;
+    z-index: 10;
+}
+
+.cross img {
+    position: absolute;
+    width: 90px;
+    top: 27px;
+    right: 218px;
+}
+
+.gravestone img {
+    position: absolute;
+    width: 90px;
+    top: 193px;
+    left: 28px;
+    transform: rotate(-7deg);
+}
+
+.tombstone img {
+    position: absolute;
+    width: 103px;
+    bottom: 18px;
+    left: 115px;
+    transform: rotate(10deg);
+
 .splash-main {
     background-color: #874000;
     margin: 100px auto;
