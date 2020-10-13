@@ -9,7 +9,7 @@ document.querySelector('.start-button').addEventListener('click', () => {
 //listen for collisions with obstacles
 function listenForCollisions() {
     document.querySelectorAll('.collision').forEach(item => {
-        item.addEventListener('mouseover', (e) => {
+        item.addEventListener('mouseenter', (e) => {
             // console.log('collision mouseOver: Oh dear, you lost as you left the path or collided with a monster!');
             alert('Oh dear, you lost as you left the path or collided with a monster!');
             e.stopPropagation();
