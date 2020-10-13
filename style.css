@@ -144,6 +144,7 @@ html, body {
     position: absolute;
     bottom: 52px;
     right: 27px;
+    cursor: url("images/ghost-cursor.cur"), pointer;
 }
 
 .ghost img {
@@ -198,7 +199,7 @@ html, body {
     transform: rotate(10deg);
 }
 
-.splash-main {
+#splash-main {
     background-color: #874000;
     margin: 100px auto;
     width: 800px;
@@ -242,6 +243,7 @@ html, body {
     width: 150px;
     padding: 20px;
     font-size: 2rem;
+    cursor: pointer;
     font-family: "ManEater";
 }
 
