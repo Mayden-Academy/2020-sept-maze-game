@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Creepster&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap');
+
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -38,6 +39,7 @@ html, body {
     height: 600px;
     position: relative;
 }
+
 .maze {
     background-color: #bc5f04;
     width: 800px;
@@ -246,9 +248,10 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
 /* Modal Content */
 .popUpContent {
     display: flex;
