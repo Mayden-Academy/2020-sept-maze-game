@@ -159,9 +159,9 @@ h1 {
 
 .rock img {
     position: absolute;
-    width: 90px;
+    width: 92px;
     top: 228px;
-    right: 175px;
+    right: 173px;
     z-index: 10;
 }
 
@@ -175,7 +175,7 @@ h1 {
 .gravestone img {
     position: absolute;
     width: 90px;
-    top: 128px;
+    top: 193px;
     left: 28px;
     transform: rotate(-7deg);
 }
@@ -184,6 +184,6 @@ h1 {
     position: absolute;
     width: 103px;
     bottom: 18px;
-    left: 135px;
+    left: 115px;
     transform: rotate(10deg);
 }
