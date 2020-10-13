@@ -12,8 +12,13 @@
     box-sizing: border-box;
 }
 
+#gameScreen{
+    display: none;
+    padding-top: 100px;
+}
+
 html, body {
-    color: whitesmoke;
+    color: #F5F5F5;
     background-color: #2b0504;
     padding: 0;
     margin: 0;
@@ -23,10 +28,14 @@ html, body {
 
 #gameScreen h1 {
     text-align: center;
-    color: whitesmoke;
-    font-family: "ManEater", sans-serif;
+    color: #F5F5F5;
+    background-color: #874000;
+    font-family: "ManEaterBold", sans-serif;
     font-size: 4rem;
-    margin: 0.3em 0;
+    width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .maze {
