@@ -1,4 +1,5 @@
-
+@import url('https://fonts.googleapis.com/css?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap');
 * {
     box-sizing: border-box;
 }
@@ -21,7 +22,7 @@ html, body {
     text-align: center;
     color: #F5F5F5;
     background-color: #874000;
-    font-family: "ManEaterBold", sans-serif;
+    font-family: "Creepster", sans-serif;
     font-size: 4rem;
     width: 800px;
     text-align: center;
@@ -38,7 +39,7 @@ html, body {
 }
 
 .start_area h2 {
-    font-family: "ManEater", sans-serif;
+    font-family: "Creepster", sans-serif;
     color: #ffffff;
     position: absolute;
     top: 244px;
@@ -209,8 +210,8 @@ html, body {
 
 .splash-heading h1 {
     padding-top: 20px;
-    font-size: 3rem;
-    font-family: "ManEaterBold";
+    font-size: 4rem;
+    font-family: "Creepster";
     letter-spacing: 3px;
 }
 
@@ -244,16 +245,17 @@ html, body {
     padding: 20px;
     font-size: 2rem;
     cursor: pointer;
-    font-family: "ManEater";
+    font-family: "Creepster";
 }
 
 .instructionsTitle {
-    font-family: "ManEater";
+    font-family: "Creepster";
     font-weight: normal;
     letter-spacing: 3px;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .instructionDetails {
     font-size: 1.5rem;
+    font-family: "Fredericka the Great";
 }
