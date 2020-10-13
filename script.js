@@ -27,17 +27,18 @@ function listenForWinning() {
 }
 
 //call functions from here
-listenForCollisions();
-listenForWinning();
 
 let ghost = document.querySelector('.ghostImage');
 let pumpkin = document.querySelector('.pumpkinImage');
 let reaper = document.querySelector('.grim_reaperImage');
 
 let start = document.querySelector('.start_area');
+
 start.addEventListener('mouseleave', (e) => {
     e.stopPropagation()
-    startAnimation()
+    startAnimation();
+    listenForCollisions();
+    listenForWinning();
 })
 
 function startAnimation() {
