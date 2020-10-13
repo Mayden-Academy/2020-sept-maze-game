@@ -1,13 +1,5 @@
-@font-face {
-    font-family: 'ManEaterBold';
-    src: url('fonts/maneater-bb/maneaterbb_bold.ttf');
-}
-
-@font-face {
-    font-family: 'ManEater';
-    src: url('fonts/maneater-bb/maneaterbb_reg.ttf');
-}
-
+@import url('https://fonts.googleapis.com/css?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap');
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -32,7 +24,7 @@ html, body {
     text-align: center;
     color: #F5F5F5;
     background-color: #874000;
-    font-family: "ManEaterBold", sans-serif;
+    font-family: "Creepster", sans-serif;
     font-size: 4rem;
     width: 800px;
     margin: 0 auto;
@@ -48,13 +40,13 @@ html, body {
 }
 
 .start_area h2 {
-    font-family: "ManEater", sans-serif;
+    font-family: "Creepster", sans-serif;
     color: #ffffff;
     position: absolute;
     top: 244px;
     left: 367px;
     z-index: 10;
-    font-size: 17px;
+    font-size: 1rem;
 }
 
 .start_area img {
@@ -67,7 +59,7 @@ html, body {
 .line div {
     background-color: #2b0504;
     position: absolute;
-    cursor: url("images/ghost-cursor.cur"), pointer;
+    cursor: url("images/charPointer.png"), pointer;
 }
 
 .thick {
@@ -154,6 +146,7 @@ html, body {
     position: absolute;
     bottom: 52px;
     right: 27px;
+    cursor: url("images/charPointer.png"), pointer;
 }
 
 .ghost img {
@@ -208,7 +201,7 @@ html, body {
     transform: rotate(10deg);
 }
 
-.splash-main {
+#splash-main {
     background-color: #874000;
     margin: 100px auto;
     width: 800px;
@@ -218,8 +211,8 @@ html, body {
 
 .splash-heading h1 {
     padding-top: 20px;
-    font-size: 3rem;
-    font-family: "ManEaterBold";
+    font-size: 4rem;
+    font-family: "Creepster";
     letter-spacing: 3px;
 }
 
@@ -268,17 +261,18 @@ html, body {
     width: 150px;
     padding: 20px;
     font-size: 2rem;
-    font-family: "ManEater";
+    cursor: pointer;
+    font-family: "Creepster";
 }
 
 .instructionsTitle {
-    font-family: "ManEater";
+    font-family: "Creepster";
     font-weight: normal;
     letter-spacing: 3px;
-    font-size: 2rem;
-    /*margin-bottom: 70px;*/
+    font-size: 3rem;
 }
 
 .instructionDetails {
     font-size: 1.5rem;
+    font-family: "Fredericka the Great";
 }
