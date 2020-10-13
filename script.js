@@ -1,5 +1,4 @@
 
-
 // Get the modal
 let modal = document.querySelector("#gameWinPopup")
 
