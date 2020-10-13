@@ -259,3 +259,36 @@ html, body {
     font-size: 1.5rem;
     font-family: "Fredericka the Great";
 }
+
+#timer {
+    background-color: #BC5F04;
+    color: #FFFFFF;
+    width: 160px;
+    font-size: 4rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px 8px rgba(0,0,0,0.5);
+    font-family: 'Creepster', cursive;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+#timer p {
+    margin: 0;
+}
+
+#countdownTimer {
+    background-color: #BC5F04;
+    color: #FFFFFF;
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Creepster', cursive;
+    position: absolute;
+    left: 400px;
+    top: 190px;
+}
+
+#countdownTimer p {
+    margin: 0;
+}
