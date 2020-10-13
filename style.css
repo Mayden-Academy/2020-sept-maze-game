@@ -3,12 +3,6 @@
 * {
     box-sizing: border-box;
 }
-
-#gameScreen{
-    display: none;
-    padding-top: 100px;
-}
-
 html, body {
     color: #F5F5F5;
     background-color: #2b0504;
@@ -16,6 +10,12 @@ html, body {
     margin: 0;
     font-size: 62.5%;
     font-family: Verdana, "Comic Sans MS", sans-serif;
+}
+
+#gameScreen{
+    display: none;
+    padding-top: 100px;
+    margin: 0 auto;
 }
 
 #gameScreen h1 {
@@ -30,12 +30,17 @@ html, body {
     padding: 20px;
 }
 
+.gameBox {
+    margin: 0 auto;
+    width: 800px;
+    height: 600px;
+    position: relative;
+}
 .maze {
     background-color: #bc5f04;
     width: 800px;
     height: 600px;
     margin: 0 auto;
-    position: relative;
 }
 
 .start_area h2 {
@@ -55,7 +60,7 @@ html, body {
     left: 362px;
 }
 
-.line div {
+.line {
     background-color: #2b0504;
     position: absolute;
     cursor: url("images/charPointer.png"), pointer;
