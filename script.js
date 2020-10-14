@@ -1,15 +1,14 @@
-
 // Get the modal
-const winModal = document.querySelector("#gameWinPopup")
-const loseModal = document.querySelector("#gameLosePopup")
+const winModal = document.querySelector("#gameWinPopup");
+const loseModal = document.querySelector("#gameLosePopup");
 
 //close the modal because there is no restart button
 document.querySelector('#closeLoseModal').addEventListener('click', () =>{
-    loseModal.style.display = "none"
+    loseModal.style.display = "none";
 })
 
 document.querySelector('#closeWinModal').addEventListener('click', () => {
-    winModal.style.display = "none"
+    winModal.style.display = "none";
 })
 
 //event listener on the start button to make splashscreen disappear
@@ -50,7 +49,7 @@ let lineSeven = document.querySelector('.line_seven');
 let start = document.querySelector('.start_area');
 
 start.addEventListener('mouseleave', (e) => {
-    e.stopPropagation()
+    e.stopPropagation();
     startAnimation();
     listenForCollisions();
     listenForWinning();
@@ -62,7 +61,6 @@ function startAnimation() {
         {transform: 'translateY(150px)'},
         {transform: 'translateY(0px)'}
     ], {
-        // timing options
         duration: 3000,
         iterations: Infinity
     });
@@ -73,7 +71,6 @@ function startAnimation() {
         {transform: 'translateX(-140px)'},
         {transform: 'translateX(0px)'}
     ], {
-        // timing options
         duration: 6000,
         iterations: Infinity
     });
@@ -84,7 +81,6 @@ function startAnimation() {
             {transform: 'translateY(100px)'},
             {transform: 'translateY(0px)'}
         ], {
-            // timing options
             duration: 3000,
             iterations: Infinity
         });
@@ -99,13 +95,10 @@ function homeScreenGhost () {
             {transform: 'translateY(-60px)'},
             {transform: 'translateY(0px)'}
         ], {
-            // timing options
             duration: 3000,
             iterations: Infinity
         });
     })
 }
 
-homeScreenGhost()
-
-
+homeScreenGhost();
