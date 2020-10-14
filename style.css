@@ -281,12 +281,12 @@ html, body {
 #countdownTimer {
     background-color: #BC5F04;
     color: #FFFFFF;
-    font-size: 3rem;
+    font-size: 5rem;
     text-align: center;
     font-family: 'Creepster', cursive;
     position: absolute;
-    left: 400px;
-    top: 190px;
+    left: 232px;
+    top: 250px;
 }
 
 #countdownTimer p {
