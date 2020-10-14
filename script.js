@@ -1,3 +1,4 @@
+
 let ghost = document.querySelector('.ghost');
 let pumpkin = document.querySelector('.pumpkinImage');
 let reaper = document.querySelector('.grim_reaperImage');
@@ -16,7 +17,7 @@ let ghostMove = ghost.animate([
     {transform: 'translateY(150px)'},
     {transform: 'translateY(0px)'}
 ], {
-    // timing options
+// timing options
     duration: 3000,
     iterations: Infinity
 });
@@ -29,7 +30,7 @@ let pumpkinMove = pumpkin.animate([
     {transform: 'translateX(-140px)'},
     {transform: 'translateX(0px)'}
 ], {
-    // timing options
+// timing options
     duration: 6000,
     iterations: Infinity
 });
@@ -40,7 +41,7 @@ let reaperMove = reaper.animate([
     {transform: 'translateY(100px)'},
     {transform: 'translateY(0px)'}
 ], {
-    // timing options
+// timing options
     duration: 3000,
     iterations: Infinity
 });
@@ -55,7 +56,7 @@ function homeScreenGhost () {
             {transform: 'translateY(-60px)'},
             {transform: 'translateY(0px)'}
         ], {
-            // timing options
+// timing options
             duration: 3000,
             iterations: Infinity
         });
@@ -128,5 +129,3 @@ function runGame() {
     listenForCollisions();
     listenForWinning();
 }
-
-
