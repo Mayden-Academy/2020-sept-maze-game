@@ -97,9 +97,9 @@ function lose() {
 document.querySelectorAll('.endButton').forEach((button) =>{
     button.addEventListener('click', (e) =>{
         e.stopPropagation();
-        start.addEventListener('mouseleave', runGame);
         loseModal.style.display = "none";
         winModal.style.display = "none";
+        start.addEventListener('mouseleave', runGame);
     })
 })
 
@@ -122,7 +122,6 @@ function listenForCollisions() {
 function listenForWinning() {
     document.querySelector('.winningSquare').addEventListener('mouseenter', (e) => {
         win()
-        e.stopPropagation();
     })
 }
 
