@@ -10,6 +10,27 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+
+    <!-- The Win Modal -->
+    <div id="gameWinPopup" class="modal">
+        <!-- Modal content -->
+        <div id="WinPopUpContent" class="popUpContent">
+            <h1>YOU WIN!</h1>
+            <p>You've won the game and can run free... unless you want to play again.</p>
+            <button class="endButton" id="closeWinModal">OK</button>
+        </div>
+    </div>
+
+    <!-- The Lose Modal -->
+    <div id="gameLosePopup" class="modal">
+        <!-- Modal content -->
+        <div id="LosePopUpContent" class="popUpContent">
+            <h1>GAME OVER</h1>
+            <p>You've lost the game, and now you have to stay in the tomb for eternity... unless you play again.</p>
+            <button class="endButton" id="closeLoseModal">OK</button>
+        </div>
+    </div>
+
   
   <!-- splash screen -->
           
@@ -17,7 +38,7 @@
         <div class="splash-heading"><h1>Jarver's Crypt</h1></div>
         <div class="splash-outerbox">
             <div class="splash-innerbox">
-                <img src="download.png" class="game-logo">
+                <img src="images/ghost.png" class="game-logo">
                 <button class="start-button">Start</button>
             </div>
             <div class="splash-innerbox">
@@ -58,15 +79,16 @@
         </div>
         <div class="ghost collision">
             <img class="ghostImage" src="images/ghost.png" alt="ghost">
+            <div class="ghostHitbox collision"></div>
         </div>
-        <div class="pumpkin collision">
-            <img class="pumpkinImage" src="images/pumpkin.png" alt="halloween pumpkin">
+        <div class="pumpkin">
+            <img class="pumpkinImage collision" src="images/pumpkin.png" alt="halloween pumpkin">
         </div>
         <div class="rock">
             <img src="images/rock.png" alt="rock">
         </div>
-        <div class="grim_reaper collision">
-            <img class="grim_reaperImage" src="images/death.png" alt="grim reaper">
+        <div class="grim_reaper">
+            <img class="grim_reaperImage collision" src="images/death.png" alt="grim reaper">
         </div>
         <div class="cross">
             <img src="images/cross.png" alt="RIP cross">
@@ -82,6 +104,7 @@
         </div>
     </div>
   </div>
+
 </body>
 </html>
 
