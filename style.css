@@ -68,6 +68,7 @@ html, body {
     top: 230px;
     left: 362px;
     cursor: pointer;
+    cursor: url("images/charPointer.png"), pointer;
 }
 
 .line {
@@ -167,59 +168,78 @@ html, body {
     bottom: 163px;
     left: 239px;
 }
+
 .ghost img {
     width: 45px;
     height: auto;
 }
 
-.ghostHitbox {
-    width: 45px;
-    height: 60.25px;
-    margin-top: -60.25px;
-}
-.pumpkin img {
+.pumpkin {
     position: absolute;
-    width: 45px;
     top: 107px;
     left: 233px;
 }
 
-.grim_reaper img {
-    position: absolute;
+.pumpkin img {
     width: 45px;
+    height: auto;
+}
+
+.grim_reaper {
+    position: absolute;
     top: 229px;
     right: 200px;
 }
+.grim_reaper img {
+    width: 45px;
+    height: auto;
+}
 
-.rock img {
+.rock {
     position: absolute;
-    width: 92px;
     top: 228px;
     right: 173px;
     z-index: 10;
 }
 
-.cross img {
+.rock img {
+    width: 92px;
+    height: auto;
+}
+
+.cross {
     position: absolute;
-    width: 90px;
     top: 27px;
     right: 218px;
 }
 
-.gravestone img {
-    position: absolute;
+.cross img {
     width: 90px;
+    height: auto;
+}
+
+.gravestone {
+    position: absolute;
     top: 193px;
     left: 28px;
     transform: rotate(-7deg);
 }
 
-.tombstone img {
+.gravestone img {
+    width: 90px;
+    height: auto;
+}
+
+.tombstone {
     position: absolute;
-    width: 103px;
     bottom: 18px;
     left: 115px;
     transform: rotate(10deg);
+}
+
+.tombstone img {
+    width: 103px;
+    height: auto;
 }
 
 #splash-main {
