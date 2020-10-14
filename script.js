@@ -48,7 +48,7 @@ let reaperMove = reaper.animate([
 });
 reaperMove.pause()
 
-// })
+
 
 // code to make splash screen mouse hover
 function homeScreenGhost () {
@@ -93,21 +93,23 @@ function lose() {
     reaperMove.pause()
 }
 
-//close the modal because there is no restart button
-document.querySelectorAll('.endButton').forEach((button) =>{
-    button.addEventListener('click', (e) =>{
-        e.stopPropagation();
-        loseModal.style.display = "none";
-        winModal.style.display = "none";
-        start.addEventListener('mouseleave', runGame);
-    })
+winModal.addEventListener('click', (e) =>{
+    e.stopPropagation();
+    winModal.style.display = "none";
+    start.addEventListener('mouseleave', runGame);
+})
+
+loseModal.addEventListener('click', (e) =>{
+    e.stopPropagation();
+    loseModal.style.display = "none";
+    start.addEventListener('mouseleave', runGame);
 })
 
 //event listener on the start button to make splashscreen disappear
 document.querySelector('.start-button').addEventListener('click', () => {
     document.querySelector('#splash-main').style.display = 'none';
     document.querySelector('#gameScreen').style.display = 'block';
-    start.addEventListener('mouseleave', runGame)
+    start.addEventListener('mouseleave', runGame);
 });
 
 
@@ -120,9 +122,7 @@ function listenForCollisions() {
 
 //win if u get to Exit door (no timers yet)
 function listenForWinning() {
-    document.querySelector('.winningSquare').addEventListener('mouseenter', (e) => {
-        win()
-    })
+    document.querySelector('.winningSquare').addEventListener('mouseenter', win)
 }
 
 //call functions from here
@@ -133,6 +133,7 @@ function runGame() {
     reaperMove.play()
     listenForCollisions();
     listenForWinning();
+
 }
 
 
