@@ -1,25 +1,14 @@
 
 // Get the modal
-let winModal = document.querySelector("#gameWinPopup")
-let loseModal = document.querySelector("#gameLosePopup")
-
-// code here to activate win modal displaying
-    let win = function() {
-        winModal.style.display = "block"
-    }
-
-// code here to activate lose modal displaying
-
-let lose = function() {
-   loseModal.style.display = "block"
-}
+const winModal = document.querySelector("#gameWinPopup")
+const loseModal = document.querySelector("#gameLosePopup")
 
 //close the modal because there is no restart button
 document.querySelector('#closeLoseModal').addEventListener('click', () =>{
     loseModal.style.display = "none"
 })
 
-document.querySelector('#closeWinModal').addEventListener('click', () =>{
+document.querySelector('#closeWinModal').addEventListener('click', () => {
     winModal.style.display = "none"
 })
 
@@ -35,7 +24,8 @@ document.querySelector('.start-button').addEventListener('click', () => {
 function listenForCollisions() {
     document.querySelectorAll('.collision').forEach(item => {
         item.addEventListener('mouseenter', (e) => {
-            lose()
+            // code here to activate lose modal displaying
+            loseModal.style.display = "block";
             e.stopPropagation();
         })
     })
@@ -44,7 +34,8 @@ function listenForCollisions() {
 //win if u get to Exit door (no timers yet)
 function listenForWinning() {
     document.querySelector('.winningSquare').addEventListener('mouseenter', (e) => {
-        win()
+        // code here to activate win modal displaying
+        winModal.style.display = "block";
         e.stopPropagation();
     })
 }
