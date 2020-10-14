@@ -1,18 +1,18 @@
 
-let ghost = document.querySelector('.ghost');
-let pumpkin = document.querySelector('.pumpkinImage');
-let reaper = document.querySelector('.grim_reaperImage');
-let lineSeven = document.querySelector('.line_seven');
+const ghost = document.querySelector('.ghost');
+const pumpkin = document.querySelector('.pumpkin');
+const reaper = document.querySelector('.grim_reaper');
+const lineSeven = document.querySelector('.line_seven');
 
-let start = document.querySelector('.start_area');
-let collision = document.querySelectorAll('.collision');
+const start = document.querySelector('.start_area');
+const collision = document.querySelectorAll('.collision');
 
 // Get the modal
-let winModal = document.querySelector("#gameWinPopup");
-let loseModal = document.querySelector("#gameLosePopup");
+const winModal = document.querySelector("#gameWinPopup");
+const loseModal = document.querySelector("#gameLosePopup");
 
 // code to animate the obstacles
-let ghostMove = ghost.animate([
+const ghostMove = ghost.animate([
     {transform: 'translateY(0px)'},
     {transform: 'translateY(150px)'},
     {transform: 'translateY(0px)'}
@@ -23,7 +23,7 @@ let ghostMove = ghost.animate([
 });
 ghostMove.pause()
 
-let pumpkinMove = pumpkin.animate([
+const pumpkinMove = pumpkin.animate([
     {transform: 'translateX(0px)'},
     {transform: 'translateX(120px)'},
     {transform: 'translateX(0px)'},
@@ -36,7 +36,7 @@ let pumpkinMove = pumpkin.animate([
 });
 pumpkinMove.pause()
 
-let reaperMove = reaper.animate([
+const reaperMove = reaper.animate([
     {transform: 'translateY(0px)'},
     {transform: 'translateY(100px)'},
     {transform: 'translateY(0px)'}
@@ -107,7 +107,7 @@ document.querySelector('.start-button').addEventListener('click', () => {
     document.querySelector('#splash-main').style.display = 'none';
     document.querySelector('#gameScreen').style.display = 'block';
     start.addEventListener('mouseleave', runGame);
-});
+})
 
 //listen for collisions with obstacles
 function listenForCollisions() {
