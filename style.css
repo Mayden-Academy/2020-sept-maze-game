@@ -43,7 +43,9 @@ html, body {
     height: 600px;
     margin: 0 auto;
 }
-
+.start_area {
+    cursor: url("images/charPointer.png"), pointer;
+}
 .start_area h2 {
     font-family: sans-serif;
     color: #ffffff;
@@ -153,14 +155,21 @@ html, body {
     right: 27px;
     cursor: url("images/charPointer.png"), pointer;
 }
-
-.ghost img {
+.ghost {
     position: absolute;
-    width: 45px;
     bottom: 163px;
     left: 239px;
 }
+.ghost img {
+    width: 45px;
+    height: auto;
+}
 
+.ghostHitbox {
+    width: 45px;
+    height: 60.25px;
+    margin-top: -60.25px;
+}
 .pumpkin img {
     position: absolute;
     width: 45px;
