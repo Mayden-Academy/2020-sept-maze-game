@@ -6,7 +6,6 @@ let lineSeven = document.querySelector('.line_seven');
 let start = document.querySelector('.start_area');
 let collision = document.querySelectorAll('.collision');
 
-
 // Get the modal
 let winModal = document.querySelector("#gameWinPopup");
 let loseModal = document.querySelector("#gameLosePopup");
