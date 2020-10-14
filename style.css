@@ -47,25 +47,23 @@ html, body {
 
 .start_area {
     cursor: url("images/charPointer.png"), pointer;
+    position: absolute;
+    top: 230px;
+    left: 362px;
 }
 
 .start_area h2 {
     font-family: sans-serif;
     color: #ffffff;
     position: absolute;
-    top: 250px;
-    left: 379px;
+    top: 20px;
+    left: 15px;
     z-index: 10;
     font-size: 1.2rem;
 }
 
 .start_area img {
     width: 60px;
-    position: absolute;
-    top: 230px;
-    left: 362px;
-    cursor: pointer;
-    cursor: url("images/charPointer.png"), pointer;
 }
 
 .line {
@@ -160,6 +158,7 @@ html, body {
     right: 27px;
     cursor: url("images/charPointer.png"), pointer;
 }
+
 .ghost {
     position: absolute;
     bottom: 163px;
@@ -169,6 +168,12 @@ html, body {
 .ghost img {
     width: 45px;
     height: auto;
+}
+
+.ghostHitbox {
+    width: 45px;
+    height: 60.25px;
+    margin-top: -60.25px;
 }
 
 .pumpkin {
@@ -271,7 +276,6 @@ html, body {
     padding: 20px;
     width: 40%;
     height: 100%;
-    /*border: 1px solid black;*/
 }
 
 .game-logo {
@@ -299,6 +303,7 @@ html, body {
     font-family: "Fredericka the Great";
 }
 
+/* under here is modal */
 .modal {
     position: fixed;
     display: none;
@@ -313,6 +318,7 @@ html, body {
     z-index: 30;
 }
 
+/* Modal Content */
 .popUpContent {
     display: flex;
     flex-direction: column;
