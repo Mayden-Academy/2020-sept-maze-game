@@ -46,10 +46,12 @@ function startCountdown(duration, element) {
         let seconds = parseInt(timeLeft % 60, 10);
         element.textContent = seconds;
         if (--timeLeft < 0) {
-            // timeLeft = duration;
+            element.textContent = 'GO!';
             clearInterval(timer)
-            startTimer(10, document.querySelector('#timer'))
+            startTimer(45, document.querySelector('#timer'))
             console.log('end of game')
         }
     }, 1000)
 }
+
+
