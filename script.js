@@ -8,8 +8,8 @@ let collision = document.querySelectorAll('.collision');
 
 
 // Get the modal
-let winModal = document.querySelector("#gameWinPopup")
-let loseModal = document.querySelector("#gameLosePopup")
+let winModal = document.querySelector("#gameWinPopup");
+let loseModal = document.querySelector("#gameLosePopup");
 
 // code to animate the obstacles
 let ghostMove = ghost.animate([
@@ -36,7 +36,6 @@ let pumpkinMove = pumpkin.animate([
 });
 pumpkinMove.pause()
 
-/*lineSeven.addEventListener('mouseleave', (e) => {*/
 let reaperMove = reaper.animate([
     {transform: 'translateY(0px)'},
     {transform: 'translateY(100px)'},
@@ -53,7 +52,7 @@ reaperMove.pause()
 // code to make splash screen mouse hover
 function homeScreenGhost () {
     document.querySelector('.start-button').addEventListener('mouseover', (e) => {
-        e.stopPropagation()
+        e.stopPropagation();
         document.querySelector('.game-logo').animate([
             {transform: 'translateY(0px)'},
             {transform: 'translateY(-60px)'},
@@ -66,7 +65,7 @@ function homeScreenGhost () {
     })
 }
 
-homeScreenGhost()
+homeScreenGhost();
 
 // code here to activate win modal displaying
 function win() {
@@ -75,9 +74,9 @@ function win() {
         this.removeEventListener('mouseenter', lose)
     })
     winModal.style.display = "block";
-    ghostMove.pause()
-    pumpkinMove.pause()
-    reaperMove.pause()
+    ghostMove.pause();
+    pumpkinMove.pause();
+    reaperMove.pause();
 }
 
 // code here to activate lose modal displaying
@@ -88,18 +87,18 @@ function lose() {
         this.removeEventListener('mouseenter', lose)
     })
     loseModal.style.display = "block";
-    ghostMove.pause()
-    pumpkinMove.pause()
-    reaperMove.pause()
+    ghostMove.pause();
+    pumpkinMove.pause();
+    reaperMove.pause();
 }
 
-winModal.addEventListener('click', (e) =>{
+winModal.addEventListener('click', (e) => {
     e.stopPropagation();
     winModal.style.display = "none";
     start.addEventListener('mouseleave', runGame);
 })
 
-loseModal.addEventListener('click', (e) =>{
+loseModal.addEventListener('click', (e) => {
     e.stopPropagation();
     loseModal.style.display = "none";
     start.addEventListener('mouseleave', runGame);
@@ -122,15 +121,15 @@ function listenForCollisions() {
 
 //win if u get to Exit door (no timers yet)
 function listenForWinning() {
-    document.querySelector('.winningSquare').addEventListener('mouseenter', win)
+    document.querySelector('.winningSquare').addEventListener('mouseenter', win);
 }
 
 //call functions from here
 
 function runGame() {
-    ghostMove.play()
-    pumpkinMove.play()
-    reaperMove.play()
+    ghostMove.play();
+    pumpkinMove.play();
+    reaperMove.play();
     listenForCollisions();
     listenForWinning();
 

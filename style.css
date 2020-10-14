@@ -46,12 +46,14 @@ html, body {
     height: 600px;
     margin: 0 auto;
 }
+
 .start_area {
     cursor: url("images/charPointer.png"), pointer;
     position: absolute;
     top: 230px;
     left: 362px;
 }
+
 .start_area h2 {
     font-family: sans-serif;
     color: #ffffff;
@@ -158,11 +160,13 @@ html, body {
     right: 27px;
     cursor: url("images/charPointer.png"), pointer;
 }
+
 .ghost {
     position: absolute;
     bottom: 163px;
     left: 239px;
 }
+
 .ghost img {
     width: 45px;
     height: auto;
@@ -173,6 +177,7 @@ html, body {
     height: 60.25px;
     margin-top: -60.25px;
 }
+
 .pumpkin img {
     position: absolute;
     width: 45px;
@@ -233,7 +238,6 @@ html, body {
     letter-spacing: 3px;
 }
 
-
 .splash-outerbox {
     width: 100%;
     height: 80%;
@@ -251,7 +255,6 @@ html, body {
     padding: 20px;
     width: 40%;
     height: 100%;
-    /*border: 1px solid black;*/
 }
 
 .game-logo {
@@ -278,8 +281,6 @@ html, body {
     font-size: 1.5rem;
     font-family: "Fredericka the Great";
 }
-
-
 /* under here is modal */
 .modal {
     position: fixed;
@@ -295,7 +296,6 @@ html, body {
     background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
     z-index: 30;
 }
-
 /* Modal Content */
 .popUpContent {
     display: flex;
