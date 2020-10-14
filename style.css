@@ -1,12 +1,10 @@
+
 @import url('https://fonts.googleapis.com/css?family=Creepster&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap');
-* {
-    box-sizing: border-box;
-}
 
-#gameScreen{
-    display: none;
-    padding-top: 100px;
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -18,6 +16,12 @@ html, body {
     font-family: Verdana, "Comic Sans MS", sans-serif;
 }
 
+#gameScreen{
+    display: none;
+    padding-top: 60px;
+    overflow: hidden;
+}
+
 #gameScreen h1 {
     text-align: center;
     color: #F5F5F5;
@@ -25,17 +29,24 @@ html, body {
     font-family: "Creepster", sans-serif;
     font-size: 4rem;
     width: 800px;
-    text-align: center;
     margin: 0 auto;
     padding: 20px;
 }
 
-.maze {
-    background-color: #bc5f04;
-    width: 800px;
-    height: 600px;
+.gameBox {
     margin: 0 auto;
+    width: 800px;
     position: relative;
+    background-color: #bc5f04;
+}
+
+/* need to keep this class with set height otherwise it stops collisions with walls being detected, fyi adding set height to its parent gameBox doesnt help */
+.maze {
+    height: 600px;
+}
+
+.start_area {
+    cursor: url("images/charPointer.png"), pointer;
 }
 
 .start_area h2 {
@@ -53,9 +64,11 @@ html, body {
     position: absolute;
     top: 230px;
     left: 362px;
+    cursor: pointer;
+    cursor: url("images/charPointer.png"), pointer;
 }
 
-.line div {
+.line {
     background-color: #2b0504;
     position: absolute;
     cursor: url("images/charPointer.png"), pointer;
@@ -147,57 +160,83 @@ html, body {
     right: 27px;
     cursor: url("images/charPointer.png"), pointer;
 }
-
-.ghost img {
+.ghost {
     position: absolute;
-    width: 45px;
     bottom: 163px;
     left: 239px;
 }
 
-.pumpkin img {
-    position: absolute;
+.ghost img {
     width: 45px;
+    height: auto;
+}
+
+.pumpkin {
+    position: absolute;
     top: 107px;
     left: 233px;
 }
 
-.grim_reaper img {
-    position: absolute;
+.pumpkin img {
     width: 45px;
+    height: auto;
+}
+
+.grim_reaper {
+    position: absolute;
     top: 229px;
     right: 200px;
 }
+.grim_reaper img {
+    width: 45px;
+    height: auto;
+}
 
-.rock img {
+.rock {
     position: absolute;
-    width: 92px;
     top: 228px;
     right: 173px;
     z-index: 10;
 }
 
-.cross img {
+.rock img {
+    width: 92px;
+    height: auto;
+}
+
+.cross {
     position: absolute;
-    width: 90px;
     top: 27px;
     right: 218px;
 }
 
-.gravestone img {
-    position: absolute;
+.cross img {
     width: 90px;
+    height: auto;
+}
+
+.gravestone {
+    position: absolute;
     top: 193px;
     left: 28px;
     transform: rotate(-7deg);
 }
 
-.tombstone img {
+.gravestone img {
+    width: 90px;
+    height: auto;
+}
+
+.tombstone {
     position: absolute;
-    width: 103px;
     bottom: 18px;
     left: 115px;
     transform: rotate(10deg);
+}
+
+.tombstone img {
+    width: 103px;
+    height: auto;
 }
 
 #splash-main {
@@ -258,4 +297,53 @@ html, body {
 .instructionDetails {
     font-size: 1.5rem;
     font-family: "Fredericka the Great";
+}
+
+.modal {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    z-index: 30;
+}
+
+.popUpContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #BC5F04;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    margin-top: 200px;
+}
+
+.popUpContent p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Fredericka the Great";
+    padding: 20px;
+}
+
+.popUpContent h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Creepster";
+    margin-bottom: 0px;
+}
+
+.endButton {
+    width: 100px;
+    padding: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    font-family: "Creepster";
 }
