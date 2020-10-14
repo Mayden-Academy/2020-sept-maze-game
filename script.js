@@ -38,7 +38,7 @@ function listenForCollisions() {
             e.stopPropagation();
         })
     })
-    ghost.pause();
+    document.querySelector('.ghost').
 }
 
 //win if u get to Exit door (no timers yet)
@@ -87,7 +87,7 @@ function startAnimation() {
         duration: 6000,
         iterations: Infinity
     });
-
+    console.log(ghost);
     lineSeven.addEventListener('mouseleave', (e) => {
         reaper.animate([
             {transform: 'translateY(0px)'},
