@@ -100,6 +100,6 @@ function startTimer(duration, element) {
 let timerRunning = false;
 document.querySelector('.start_area').addEventListener('mouseout', ()=> {
     if ( timerRunning === false) {
-        startTimer(30, document.querySelector('#timer p'));
+        startTimer(45, document.querySelector('#timer p'));
     }
 })

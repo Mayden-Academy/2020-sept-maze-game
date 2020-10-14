@@ -290,12 +290,12 @@ html, body {
     font-size: 4rem;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 3px 3px 7px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 7px 8px rgba(0,0,0,0.5);
     font-family: 'Creepster', cursive;
-}
-
-#timer p {
     position: absolute;
-    top: 15px;
     right: 15px;
+    top: 15px;
+}
+#timer p {
+    margin: 0;
 }
