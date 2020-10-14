@@ -27,7 +27,6 @@ document.querySelector('#closeWinModal').addEventListener('click', () =>{
 document.querySelector('.start-button').addEventListener('click', () => {
     document.querySelector('#splash-main').style.display = 'none';
     document.querySelector('#gameScreen').style.display = 'block';
-
 });
 
 
@@ -39,6 +38,7 @@ function listenForCollisions() {
             e.stopPropagation();
         })
     })
+    ghost.pause();
 }
 
 //win if u get to Exit door (no timers yet)
@@ -64,6 +64,7 @@ start.addEventListener('mouseleave', (e) => {
     listenForCollisions();
     listenForWinning();
 })
+
 
 function startAnimation() {
     ghost.animate([
@@ -99,6 +100,39 @@ function startAnimation() {
         });
     })
 }
+//     ghost.animate([
+//         {transform: 'translateY(0px)'},
+//         {transform: 'translateY(150px)'},
+//         {transform: 'translateY(0px)'}
+//     ], {
+//         // timing options
+//         duration: 3000,
+//         iterations: Infinity
+//     });
+//     pumpkin.animate([
+//         {transform: 'translateX(0px)'},
+//         {transform: 'translateX(120px)'},
+//         {transform: 'translateX(0px)'},
+//         {transform: 'translateX(-140px)'},
+//         {transform: 'translateX(0px)'}
+//     ], {
+//         // timing options
+//         duration: 6000,
+//         iterations: Infinity
+//     });
+//
+//     lineSeven.addEventListener('mouseleave', (e) => {
+//         reaper.animate([
+//             {transform: 'translateY(0px)'},
+//             {transform: 'translateY(100px)'},
+//             {transform: 'translateY(0px)'}
+//         ], {
+//             // timing options
+//             duration: 3000,
+//             iterations: Infinity
+//         });
+//     })
+// }
 
 function homeScreenGhost () {
     document.querySelector('.start-button').addEventListener('mouseover', (e) => {
