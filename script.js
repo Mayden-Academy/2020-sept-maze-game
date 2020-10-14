@@ -1,5 +1,4 @@
 
-
 // Get the modal
 let winModal = document.querySelector("#gameWinPopup")
 let loseModal = document.querySelector("#gameLosePopup")
@@ -15,18 +14,13 @@ let lose = function() {
    loseModal.style.display = "block"
 }
 
-// When the user clicks anywhere outside of the modal, close it
-//this isn't working any more...
-// window.addEventListener('click', (event) => {
-//     if (event.target === winModal) {
-//         winModal.style.display = "none"
-//     }
-// })
+//close the modal because there is no restart button
+document.querySelector('#closeLoseModal').addEventListener('click', () =>{
+    loseModal.style.display = "none"
+})
 
-window.addEventListener('click', (event) => {
-    if (event.target === loseModal) {
-        loseModal.style.display = "none"
-    }
+document.querySelector('#closeWinModal').addEventListener('click', () =>{
+    winModal.style.display = "none"
 })
 
 //event listener on the start button to make splashscreen disappear
