@@ -1,5 +1,7 @@
+
 @import url('https://fonts.googleapis.com/css?family=Creepster&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap');
+
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -37,6 +39,7 @@ html, body {
     height: 600px;
     position: relative;
 }
+
 .maze {
     background-color: #bc5f04;
     width: 800px;
@@ -61,6 +64,7 @@ html, body {
     position: absolute;
     top: 230px;
     left: 362px;
+    cursor: pointer;
 }
 
 .line {
@@ -230,35 +234,20 @@ html, body {
     letter-spacing: 3px;
 }
 
+
 .splash-outerbox {
     width: 100%;
     height: 80%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
 }
 
 .splash-innerbox {
     background-color: #BC5F04;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     padding: 20px;
     width: 40%;
@@ -289,4 +278,57 @@ html, body {
 .instructionDetails {
     font-size: 1.5rem;
     font-family: "Fredericka the Great";
+}
+
+
+/* under here is modal */
+.modal {
+    position: fixed;
+    display: none; /* Hidden by default */
+    z-index: 10; /* Sit on top */
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    z-index: 30;
+}
+
+/* Modal Content */
+.popUpContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #BC5F04;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    margin-top: 200px;
+}
+
+.popUpContent p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Fredericka the Great";
+    padding: 20px;
+}
+
+.popUpContent h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Creepster";
+    margin-bottom: 0px;
+}
+
+.endButton {
+    width: 100px;
+    padding: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    font-family: "Creepster";
 }

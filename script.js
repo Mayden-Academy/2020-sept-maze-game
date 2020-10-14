@@ -1,3 +1,28 @@
+
+// Get the modal
+let winModal = document.querySelector("#gameWinPopup")
+let loseModal = document.querySelector("#gameLosePopup")
+
+// code here to activate win modal displaying
+    let win = function() {
+        winModal.style.display = "block"
+    }
+
+// code here to activate lose modal displaying
+
+let lose = function() {
+   loseModal.style.display = "block"
+}
+
+//close the modal because there is no restart button
+document.querySelector('#closeLoseModal').addEventListener('click', () =>{
+    loseModal.style.display = "none"
+})
+
+document.querySelector('#closeWinModal').addEventListener('click', () =>{
+    winModal.style.display = "none"
+})
+
 //event listener on the start button to make splashscreen disappear
 document.querySelector('.start-button').addEventListener('click', () => {
     document.querySelector('#splash-main').style.display = 'none';
@@ -11,11 +36,16 @@ function listenForCollisions() {
     document.querySelectorAll('.collision').forEach(item => {
         item.addEventListener('mouseenter', (e) => {
             // console.log('collision mouseOver: Oh dear, you lost as you left the path or collided with a monster!');
+<<<<<<< HEAD
             alert('Oh dear, you lost as you left the path or collided with a monster!');
         })
         item.addEventListener('mouseover', (e) => {
             // console.log('collision mouseOver: Oh dear, you lost as you left the path or collided with a monster!');
             alert('Oh dear, you lost as you left the path or collided with a monster!');
+=======
+            //alert('Oh dear, you lost as you left the path or collided with a monster!');
+            lose()
+>>>>>>> 5099c6c3fc3f4abf123865b3c224f0662f3dae72
             e.stopPropagation();
         })
     })
@@ -25,7 +55,8 @@ function listenForCollisions() {
 function listenForWinning() {
     document.querySelector('.winningSquare').addEventListener('mouseenter', (e) => {
         // console.log('winningSquare mouseover: Congrats! You made it to the Exit!');
-        alert('Congrats! You made it to the Exit!');
+        //alert('Congrats! You made it to the Exit!');
+        win()
         e.stopPropagation();
     })
 }
@@ -67,6 +98,7 @@ function startAnimation() {
         duration: 6000,
         iterations: Infinity
     });
+<<<<<<< HEAD
     lineSeven.addEventListener('mouseleave', (e) => {
         reaper.animate([
             {transform: 'translateY(0px)'},
@@ -96,3 +128,7 @@ function homeScreenGhost () {
 }
 
 homeScreenGhost()
+=======
+}
+
+>>>>>>> 5099c6c3fc3f4abf123865b3c224f0662f3dae72
