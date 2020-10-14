@@ -3,7 +3,7 @@ const winModal = document.querySelector("#gameWinPopup");
 const loseModal = document.querySelector("#gameLosePopup");
 
 //close the modal because there is no restart button
-document.querySelector('#closeLoseModal').addEventListener('click', () =>{
+document.querySelector('#closeLoseModal').addEventListener('click', () => {
     loseModal.style.display = "none";
 })
 
@@ -15,7 +15,6 @@ document.querySelector('#closeWinModal').addEventListener('click', () => {
 document.querySelector('.start-button').addEventListener('click', () => {
     document.querySelector('#splash-main').style.display = 'none';
     document.querySelector('#gameScreen').style.display = 'block';
-
 });
 
 
@@ -41,12 +40,12 @@ function listenForWinning() {
 
 //call functions from here
 
-let ghost = document.querySelector('.ghost');
-let pumpkin = document.querySelector('.pumpkin');
-let reaper = document.querySelector('.grim_reaper');
-let lineSeven = document.querySelector('.line_seven');
+const ghost = document.querySelector('.ghost');
+const pumpkin = document.querySelector('.pumpkin');
+const reaper = document.querySelector('.grim_reaper');
+const lineSeven = document.querySelector('.line_seven');
 
-let start = document.querySelector('.start_area');
+const start = document.querySelector('.start_area');
 
 start.addEventListener('mouseleave', (e) => {
     e.stopPropagation();
