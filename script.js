@@ -46,8 +46,6 @@ let reaperMove = reaper.animate([
 });
 reaperMove.pause()
 
-
-
 // code to make splash screen mouse hover
 function homeScreenGhost () {
     document.querySelector('.start-button').addEventListener('mouseover', (e) => {
@@ -110,7 +108,6 @@ document.querySelector('.start-button').addEventListener('click', () => {
     start.addEventListener('mouseleave', runGame);
 });
 
-
 //listen for collisions with obstacles
 function listenForCollisions() {
     collision.forEach(item => {
@@ -124,14 +121,12 @@ function listenForWinning() {
 }
 
 //call functions from here
-
 function runGame() {
     ghostMove.play();
     pumpkinMove.play();
     reaperMove.play();
     listenForCollisions();
     listenForWinning();
-
 }
 
 
