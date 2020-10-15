@@ -6,6 +6,7 @@ const start = document.querySelector('.start_area');
 const collision = document.querySelectorAll('.collision');
 const winModal = document.querySelector("#gameWinPopup");
 const loseModal = document.querySelector("#gameLosePopup");
+const winningDoor = document.querySelector('.winningSquare');
 
 //animation section, shouldnt be in function as consts need to be globally accessible
 const ghostMove = ghost.animate([
@@ -60,9 +61,10 @@ homeScreenGhost();
 // code here to activate win modal displaying
 function win() {
     start.removeEventListener('mouseleave', runGame);
-    collision.forEach(() => {
-        this.removeEventListener('mouseenter', win);
+    collision.forEach((item) => {
+        item.removeEventListener('mouseenter', lose);
     })
+    winningDoor.removeEventListener('mouseenter', win);
     winModal.style.display = "block";
     ghostMove.pause();
     pumpkinMove.pause();
@@ -72,9 +74,10 @@ function win() {
 // code here to activate lose modal displaying
 function lose() {
     start.removeEventListener('mouseleave', runGame);
-    collision.forEach(() => {
-        this.removeEventListener('mouseenter', lose)
+    collision.forEach((item) => {
+        item.removeEventListener('mouseenter', lose)
     });
+    winningDoor.removeEventListener('mouseenter', win);
     loseModal.style.display = "block";
     ghostMove.pause();
     pumpkinMove.pause();
@@ -109,7 +112,7 @@ function listenForCollisions() {
 
 //win if u get to Exit door (no timers yet)
 function listenForWinning() {
-    document.querySelector('.winningSquare').addEventListener('mouseenter', win);
+    winningDoor.addEventListener('mouseenter', win);
 }
 
 //call main function to start game from here
