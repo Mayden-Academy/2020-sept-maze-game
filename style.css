@@ -44,14 +44,14 @@ html, body {
     height: 600px;
 }
 
-.start_area {
+.startArea {
     cursor: url("images/charPointer.png"), pointer;
     position: absolute;
     top: 230px;
     left: 362px;
 }
 
-.start_area h2 {
+.startArea h2 {
     font-family: sans-serif;
     color: #ffffff;
     position: absolute;
@@ -61,7 +61,7 @@ html, body {
     font-size: 1.2rem;
 }
 
-.start_area img {
+.startArea img {
     width: 60px;
 }
 
@@ -79,7 +79,7 @@ html, body {
     width: 14px;
 }
 
-.line_one {
+.lineOne {
     top: 347px;
     left: 375px;
     height: 100px;
@@ -89,68 +89,68 @@ html, body {
     transform: rotate(90deg);
 }
 
-.line_two {
+.lineTwo {
     top: 336px;
     left: 266px;
     height: 242px;
 }
 
-.line_three {
+.lineThree {
     top: 90px;
     left: 137px;
     height: 378px;
 }
 
-.line_four {
+.lineFour {
     top: -34px;
     left: 242px;
     height: 234px;
 }
 
-.line_five {
+.lineFive {
     top: 71px;
     left: 347px;
     height: 100px;
 }
 
-.line_six {
+.lineSix {
     top: 102px;
     left: 415px;
     height: 150px;
 }
 
-.line_seven {
+.lineSeven {
     top: 170px;
     left: 483px;
     height: 150px;
 }
 
-.line_eight {
+.lineEight {
     top: 288px;
     left: 491px;
     height: 40px;
 }
 
-.line_nine {
+.lineNine {
     top: 254px;
     left: 565px;
     height: 109px;
 }
 
-.line_ten {
+.lineTen {
     bottom: 118px;
     right: 168px;
     height: 186px;
 }
 
-.line_eleven {
+.lineEleven {
     bottom: 77px;
     right: 133px;
     height: 100px;
     width: 18px;
 }
 
-.finish_area img {
+.finishArea img {
     width: 80px;
     position: absolute;
     bottom: 52px;
@@ -169,12 +169,6 @@ html, body {
     height: auto;
 }
 
-.ghostHitbox {
-    width: 45px;
-    height: 60.25px;
-    margin-top: -60.25px;
-}
-
 .pumpkin {
     position: absolute;
     top: 107px;
@@ -186,13 +180,13 @@ html, body {
     height: auto;
 }
 
-.grim_reaper {
+.grimReaper {
     position: absolute;
     top: 229px;
     right: 200px;
 }
 
-.grim_reaper img {
+.grimReaper img {
     width: 45px;
     height: auto;
 }
@@ -244,7 +238,7 @@ html, body {
     height: auto;
 }
 
-#splash-main {
+#splashMain {
     background-color: #874000;
     margin: 100px auto;
     width: 800px;
@@ -252,14 +246,14 @@ html, body {
     text-align: center;
 }
 
-.splash-heading h1 {
+.splashHeading h1 {
     padding-top: 20px;
     font-size: 4rem;
     font-family: "Creepster";
     letter-spacing: 3px;
 }
 
-.splash-outerbox {
+.splashOuterbox {
     width: 100%;
     height: 80%;
     display: flex;
@@ -267,7 +261,7 @@ html, body {
     justify-content: space-evenly;
 }
 
-.splash-innerbox {
+.splashInnerbox {
     background-color: #BC5F04;
     display: flex;
     flex-direction: column;
@@ -278,12 +272,12 @@ html, body {
     height: 100%;
 }
 
-.game-logo {
+.gameLogo {
     width: 150px;
     height: auto;
 }
 
-.start-button {
+.startButton {
     width: 150px;
     padding: 20px;
     font-size: 2rem;

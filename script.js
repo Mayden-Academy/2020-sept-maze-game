@@ -1,8 +1,8 @@
 const ghost = document.querySelector('.ghost');
 const pumpkin = document.querySelector('.pumpkin');
-const reaper = document.querySelector('.grim_reaper');
+const reaper = document.querySelector('.grimReaper');
 const grimReaperZone = document.querySelector('.grimReaperZone');
-const start = document.querySelector('.start_area');
+const start = document.querySelector('.startArea');
 const collision = document.querySelectorAll('.collision');
 const winModal = document.querySelector("#gameWinPopup");
 const loseModal = document.querySelector("#gameLosePopup");
@@ -41,11 +41,10 @@ const reaperMove = reaper.animate([
 });
 reaperMove.pause();
 
-// code to make splash screen mouse hover
-
-document.querySelector('.start-button').addEventListener('mouseover', (e) => {
+// code to make splash screen ghost move on mouse hover of start button
+document.querySelector('.startButton').addEventListener('mouseover', (e) => {
     e.stopPropagation();
-    document.querySelector('.game-logo').animate([
+    document.querySelector('.gameLogo').animate([
         {transform: 'translateY(0px)'},
         {transform: 'translateY(-60px)'},
         {transform: 'translateY(0px)'}
@@ -92,8 +91,8 @@ loseModal.addEventListener('click', (e) => {
 });
 
 //event listener on the start button to make splashscreen disappear
-document.querySelector('.start-button').addEventListener('click', () => {
-    document.querySelector('#splash-main').style.display = 'none';
+document.querySelector('.startButton').addEventListener('click', () => {
+    document.querySelector('#splashMain').style.display = 'none';
     document.querySelector('#gameScreen').style.display = 'block';
     start.addEventListener('mouseleave', runGame);
 })
