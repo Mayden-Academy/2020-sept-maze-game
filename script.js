@@ -125,8 +125,8 @@ let timerRunning = false;
 function runGame() {
     ghostMove.play();
     pumpkinMove.play();
-    if ( timerRunning === false) {
-        startTimer(45, document.querySelector('#timer p'));
+    if (timerRunning === false) {
+        startTimer(44, document.querySelector('#timer p'));
     }
     listenForCollisions();
     listenForWinning();
@@ -137,7 +137,7 @@ let timer;
 function startTimer(duration, element) {
     timerRunning = true;
     let timeLeft = duration;
-    timer = setInterval( () => {
+    timer = setInterval(() => {
         let minutes = parseInt(timeLeft / 60, 10);
         let seconds = parseInt(timeLeft % 60, 10);
 
