@@ -42,21 +42,18 @@ const reaperMove = reaper.animate([
 reaperMove.pause();
 
 // code to make splash screen mouse hover
-function addSplashScreenGhostAnimation() {
-    document.querySelector('.start-button').addEventListener('mouseover', (e) => {
-        e.stopPropagation();
-        document.querySelector('.game-logo').animate([
-            {transform: 'translateY(0px)'},
-            {transform: 'translateY(-60px)'},
-            {transform: 'translateY(0px)'}
-        ], {
-            duration: 3000,
-            iterations: Infinity
-        });
-    });
-}
 
-addSplashScreenGhostAnimation();
+document.querySelector('.start-button').addEventListener('mouseover', (e) => {
+    e.stopPropagation();
+    document.querySelector('.game-logo').animate([
+        {transform: 'translateY(0px)'},
+        {transform: 'translateY(-60px)'},
+        {transform: 'translateY(0px)'}
+    ], {
+        duration: 3000,
+        iterations: Infinity
+    });
+});
 
 function resetGame() {
     start.removeEventListener('mouseleave', runGame);
