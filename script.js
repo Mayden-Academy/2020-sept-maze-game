@@ -58,32 +58,28 @@ function addSplashScreenGhostAnimation() {
 
 addSplashScreenGhostAnimation();
 
-// code here to activate win modal displaying
-function win() {
-    start.removeEventListener('mouseleave', runGame);
-    collision.forEach((item) => {
-        item.removeEventListener('mouseenter', lose);
-    })
-    winningDoor.removeEventListener('mouseenter', win);
-    winModal.style.display = "block";
-    ghostMove.pause();
-    pumpkinMove.pause();
-    reaperMove.cancel();
-    grimReaperZone.removeEventListener('mouseleave',moveReaper);
-}
-
-// code here to activate lose modal displaying
-function lose() {
+function resetGame() {
     start.removeEventListener('mouseleave', runGame);
     collision.forEach((item) => {
         item.removeEventListener('mouseenter', lose)
     });
     winningDoor.removeEventListener('mouseenter', win);
-    loseModal.style.display = "block";
     ghostMove.pause();
     pumpkinMove.pause();
     reaperMove.cancel();
     grimReaperZone.removeEventListener('mouseleave', moveReaper);
+}
+
+// code here to activate win modal displaying
+function win() {
+    winModal.style.display = "block";
+    resetGame();
+}
+
+// code here to activate lose modal displaying
+function lose() {
+    loseModal.style.display = "block";
+    resetGame();
 }
 
 winModal.addEventListener('click', (e) => {
