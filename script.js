@@ -1,47 +1,40 @@
+const ghost = document.querySelector('.ghost');
+const pumpkin = document.querySelector('.pumpkin');
+const reaper = document.querySelector('.grim_reaper');
+const lineEight = document.querySelector('.line_eight');
+const start = document.querySelector('.start_area');
+const collision = document.querySelectorAll('.collision');
+const winModal = document.querySelector("#gameWinPopup");
+const loseModal = document.querySelector("#gameLosePopup");
 
-let ghost = document.querySelector('.ghost');
-let pumpkin = document.querySelector('.pumpkin');
-let reaper = document.querySelector('.grim_reaper');
-let lineEight = document.querySelector('.line_eight');
-
-let start = document.querySelector('.start_area');
-let collision = document.querySelectorAll('.collision');
-
-// Get the modal
-let winModal = document.querySelector("#gameWinPopup");
-let loseModal = document.querySelector("#gameLosePopup");
-
-// code to animate the obstacles
-let ghostMove = ghost.animate([
+//animation section, shouldnt be in function as consts need to be globally accessible
+const ghostMove = ghost.animate([
     {transform: 'translateY(0px)'},
     {transform: 'translateY(150px)'},
     {transform: 'translateY(0px)'}
 ], {
-// timing options
     duration: 3000,
     iterations: Infinity
 });
 ghostMove.pause();
 
-let pumpkinMove = pumpkin.animate([
+const pumpkinMove = pumpkin.animate([
     {transform: 'translateX(0px)'},
     {transform: 'translateX(120px)'},
     {transform: 'translateX(0px)'},
     {transform: 'translateX(-140px)'},
     {transform: 'translateX(0px)'}
 ], {
-// timing options
     duration: 6000,
     iterations: Infinity
 });
 pumpkinMove.pause();
 
-let reaperMove = reaper.animate([
+const reaperMove = reaper.animate([
     {transform: 'translateY(0px)'},
     {transform: 'translateY(100px)'},
     {transform: 'translateY(0px)'}
 ], {
-// timing options
     duration: 3000,
     iterations: Infinity
 });
@@ -56,7 +49,6 @@ function homeScreenGhost () {
             {transform: 'translateY(-60px)'},
             {transform: 'translateY(0px)'}
         ], {
-// timing options
             duration: 3000,
             iterations: Infinity
         });
@@ -69,8 +61,8 @@ homeScreenGhost();
 function win() {
     start.removeEventListener('mouseleave', runGame);
     collision.forEach(() => {
-        this.removeEventListener('mouseenter', lose)
-    });
+        this.removeEventListener('mouseenter', win);
+    })
     winModal.style.display = "block";
     ghostMove.pause();
     pumpkinMove.pause();
@@ -78,7 +70,6 @@ function win() {
 }
 
 // code here to activate lose modal displaying
-
 function lose() {
     start.removeEventListener('mouseleave', runGame);
     collision.forEach(() => {
@@ -121,7 +112,7 @@ function listenForWinning() {
     document.querySelector('.winningSquare').addEventListener('mouseenter', win);
 }
 
-//call functions from here
+//call main function to start game from here
 function runGame() {
     ghostMove.play();
     pumpkinMove.play();
