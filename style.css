@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Creepster&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap');
 
@@ -347,7 +346,6 @@ html, body {
     font-family: "Creepster";
 }
 
-/* timer for game css */
 #timer {
     background-color: #BC5F04;
     color: #FFFFFF;
@@ -361,6 +359,7 @@ html, body {
     right: 15px;
     top: 15px;
 }
+
 #timer p {
     margin: 0;
 }

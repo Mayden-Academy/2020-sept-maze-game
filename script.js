@@ -8,7 +8,7 @@ const winModal = document.querySelector("#gameWinPopup");
 const loseModal = document.querySelector("#gameLosePopup");
 const winningDoor = document.querySelector('.winningSquare');
 
-//animation section, shouldnt be in function as consts need to be globally accessible
+// animation section, shouldn't be in function as consts need to be globally accessible
 const ghostMove = ghost.animate([
     {transform: 'translateY(0px)'},
     {transform: 'translateY(150px)'},
@@ -97,21 +97,21 @@ loseModal.addEventListener('click', (e) => {
     start.addEventListener('mouseleave', runGame);
 });
 
-//event listener on the start button to make splashscreen disappear
+// event listener on the start button to make splashscreen disappear
 document.querySelector('.startButton').addEventListener('click', () => {
     document.querySelector('#splashMain').style.display = 'none';
     document.querySelector('#gameScreen').style.display = 'block';
     start.addEventListener('mouseleave', runGame);
 })
 
-//listen for collisions with obstacles
+// listen for collisions with obstacles
 function listenForCollisions() {
     collision.forEach(item => {
         item.addEventListener('mouseenter', lose);
     });
 }
 
-//win if u get to Exit door (no timers yet)
+// win if you get to Exit door
 function listenForWinning() {
     winningDoor.addEventListener('mouseenter', win);
 }
@@ -121,7 +121,7 @@ function moveReaper() {
 
 let timerRunning = false;
 
-//call main function to start game from here
+// call main function to start game from here
 function runGame() {
     ghostMove.play();
     pumpkinMove.play();
@@ -134,6 +134,7 @@ function runGame() {
 }
 
 let timer;
+
 function startTimer(duration, element) {
     timerRunning = true;
     let timeLeft = duration;
