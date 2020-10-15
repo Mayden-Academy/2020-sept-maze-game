@@ -1,7 +1,7 @@
 
 let ghost = document.querySelector('.ghost');
-let pumpkin = document.querySelector('.pumpkinImage');
-let reaper = document.querySelector('.grim_reaperImage');
+let pumpkin = document.querySelector('.pumpkin');
+let reaper = document.querySelector('.grim_reaper');
 let lineSeven = document.querySelector('.line_seven');
 
 let start = document.querySelector('.start_area');
