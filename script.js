@@ -1,7 +1,7 @@
 const ghost = document.querySelector('.ghost');
 const pumpkin = document.querySelector('.pumpkin');
 const reaper = document.querySelector('.grim_reaper');
-const lineEight = document.querySelector('.line_eight');
+const grimReaperZone = document.querySelector('.grimReaperZone');
 const start = document.querySelector('.start_area');
 const collision = document.querySelectorAll('.collision');
 const winModal = document.querySelector("#gameWinPopup");
@@ -42,48 +42,41 @@ const reaperMove = reaper.animate([
 reaperMove.pause();
 
 // code to make splash screen mouse hover
-function homeScreenGhost () {
-    document.querySelector('.start-button').addEventListener('mouseover', (e) => {
-        e.stopPropagation();
-        document.querySelector('.game-logo').animate([
-            {transform: 'translateY(0px)'},
-            {transform: 'translateY(-60px)'},
-            {transform: 'translateY(0px)'}
-        ], {
-            duration: 3000,
-            iterations: Infinity
-        });
+
+document.querySelector('.start-button').addEventListener('mouseover', (e) => {
+    e.stopPropagation();
+    document.querySelector('.game-logo').animate([
+        {transform: 'translateY(0px)'},
+        {transform: 'translateY(-60px)'},
+        {transform: 'translateY(0px)'}
+    ], {
+        duration: 3000,
+        iterations: Infinity
     });
-}
+});
 
-homeScreenGhost();
-
-// code here to activate win modal displaying
-function win() {
-    start.removeEventListener('mouseleave', runGame);
-    collision.forEach((item) => {
-        item.removeEventListener('mouseenter', lose);
-    })
-    winningDoor.removeEventListener('mouseenter', win);
-    winModal.style.display = "block";
-    ghostMove.pause();
-    pumpkinMove.pause();
-    reaperMove.cancel();
-    lineEight.removeEventListener('mouseleave',moveReaper);
-}
-
-// code here to activate lose modal displaying
-function lose() {
+function resetGame() {
     start.removeEventListener('mouseleave', runGame);
     collision.forEach((item) => {
         item.removeEventListener('mouseenter', lose)
     });
     winningDoor.removeEventListener('mouseenter', win);
-    loseModal.style.display = "block";
     ghostMove.pause();
     pumpkinMove.pause();
     reaperMove.cancel();
-    lineEight.removeEventListener('mouseleave', moveReaper);
+    grimReaperZone.removeEventListener('mouseleave', moveReaper);
+}
+
+// code here to activate win modal displaying
+function win() {
+    winModal.style.display = "block";
+    resetGame();
+}
+
+// code here to activate lose modal displaying
+function lose() {
+    loseModal.style.display = "block";
+    resetGame();
 }
 
 winModal.addEventListener('click', (e) => {
@@ -126,5 +119,5 @@ function runGame() {
     pumpkinMove.play();
     listenForCollisions();
     listenForWinning();
-    lineEight.addEventListener('mouseleave',moveReaper);
+    grimReaperZone.addEventListener('mouseleave',moveReaper);
 }
