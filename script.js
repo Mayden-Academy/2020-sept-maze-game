@@ -4,7 +4,7 @@ document.querySelector('.startButton').addEventListener('click', () => {
 
     document.querySelector('#splashMain').style.display = 'none';
     document.querySelector('#gameScreen').style.display = 'block';
-    startCountdown(5, document.querySelector('#countdownTimer p'));
+    startCountdown(5, document.querySelector('#countdownDisplay'));
 
 });
 
