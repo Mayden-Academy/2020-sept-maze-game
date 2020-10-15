@@ -1,7 +1,7 @@
 const ghost = document.querySelector('.ghost');
 const pumpkin = document.querySelector('.pumpkin');
 const reaper = document.querySelector('.grim_reaper');
-const lineEight = document.querySelector('.line_eight');
+const grimReaperZone = document.querySelector('.grimReaperZone');
 const start = document.querySelector('.start_area');
 const collision = document.querySelectorAll('.collision');
 const winModal = document.querySelector("#gameWinPopup");
@@ -69,7 +69,7 @@ function win() {
     ghostMove.pause();
     pumpkinMove.pause();
     reaperMove.cancel();
-    lineEight.removeEventListener('mouseleave',moveReaper);
+    grimReaperZone.removeEventListener('mouseleave',moveReaper);
 }
 
 // code here to activate lose modal displaying
@@ -83,7 +83,7 @@ function lose() {
     ghostMove.pause();
     pumpkinMove.pause();
     reaperMove.cancel();
-    lineEight.removeEventListener('mouseleave', moveReaper);
+    grimReaperZone.removeEventListener('mouseleave', moveReaper);
 }
 
 winModal.addEventListener('click', (e) => {
@@ -126,5 +126,5 @@ function runGame() {
     pumpkinMove.play();
     listenForCollisions();
     listenForWinning();
-    lineEight.addEventListener('mouseleave',moveReaper);
+    grimReaperZone.addEventListener('mouseleave',moveReaper);
 }
