@@ -1,8 +1,7 @@
-
-const ghost = document.querySelector('.ghost');
-const pumpkin = document.querySelector('.pumpkin');
-const reaper = document.querySelector('.grim_reaper');
-const lineSeven = document.querySelector('.line_seven');
+let ghost = document.querySelector('.ghost');
+let pumpkin = document.querySelector('.pumpkin');
+let reaper = document.querySelector('.grim_reaper');
+let lineSeven = document.querySelector('.line_seven');
 
 const start = document.querySelector('.start_area');
 const collision = document.querySelectorAll('.collision');
