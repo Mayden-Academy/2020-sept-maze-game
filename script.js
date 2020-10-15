@@ -1,10 +1,9 @@
 const ghost = document.querySelector('.ghost');
 const pumpkin = document.querySelector('.pumpkin');
 const reaper = document.querySelector('.grim_reaper');
-const lineSeven = document.querySelector('.line_seven');
+const lineEight = document.querySelector('.line_eight');
 const start = document.querySelector('.start_area');
 const collision = document.querySelectorAll('.collision');
-
 const winModal = document.querySelector("#gameWinPopup");
 const loseModal = document.querySelector("#gameLosePopup");
 
@@ -53,7 +52,7 @@ function homeScreenGhost () {
             duration: 3000,
             iterations: Infinity
         });
-    })
+    });
 }
 
 homeScreenGhost();
@@ -67,32 +66,32 @@ function win() {
     winModal.style.display = "block";
     ghostMove.pause();
     pumpkinMove.pause();
-    reaperMove.pause();
+    reaperMove.cancel();
 }
 
 // code here to activate lose modal displaying
 function lose() {
     start.removeEventListener('mouseleave', runGame);
     collision.forEach(() => {
-        this.removeEventListener('mouseenter', lose);
-    })
+        this.removeEventListener('mouseenter', lose)
+    });
     loseModal.style.display = "block";
     ghostMove.pause();
     pumpkinMove.pause();
-    reaperMove.pause();
+    reaperMove.cancel();
 }
 
 winModal.addEventListener('click', (e) => {
     e.stopPropagation();
     winModal.style.display = "none";
     start.addEventListener('mouseleave', runGame);
-})
+});
 
 loseModal.addEventListener('click', (e) => {
     e.stopPropagation();
     loseModal.style.display = "none";
     start.addEventListener('mouseleave', runGame);
-})
+});
 
 //event listener on the start button to make splashscreen disappear
 document.querySelector('.start-button').addEventListener('click', () => {
@@ -105,7 +104,7 @@ document.querySelector('.start-button').addEventListener('click', () => {
 function listenForCollisions() {
     collision.forEach(item => {
         item.addEventListener('mouseenter', lose);
-    })
+    });
 }
 
 //win if u get to Exit door (no timers yet)
@@ -117,7 +116,9 @@ function listenForWinning() {
 function runGame() {
     ghostMove.play();
     pumpkinMove.play();
-    reaperMove.play();
     listenForCollisions();
     listenForWinning();
+    lineEight.addEventListener('mouseleave',() => {
+       reaperMove.play();
+    });
 }
