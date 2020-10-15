@@ -69,6 +69,7 @@ function win() {
     ghostMove.pause();
     pumpkinMove.pause();
     reaperMove.cancel();
+    lineEight.removeEventListener('mouseleave',moveReaper);
 }
 
 // code here to activate lose modal displaying
@@ -82,6 +83,7 @@ function lose() {
     ghostMove.pause();
     pumpkinMove.pause();
     reaperMove.cancel();
+    lineEight.removeEventListener('mouseleave', moveReaper);
 }
 
 winModal.addEventListener('click', (e) => {
@@ -114,6 +116,9 @@ function listenForCollisions() {
 function listenForWinning() {
     winningDoor.addEventListener('mouseenter', win);
 }
+function moveReaper() {
+    reaperMove.play();
+}
 
 //call main function to start game from here
 function runGame() {
@@ -121,7 +126,5 @@ function runGame() {
     pumpkinMove.play();
     listenForCollisions();
     listenForWinning();
-    lineEight.addEventListener('mouseleave',() => {
-       reaperMove.play();
-    });
+    lineEight.addEventListener('mouseleave',moveReaper);
 }
