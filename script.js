@@ -1,51 +1,45 @@
+const ghost = document.querySelector('.ghost');
+const pumpkin = document.querySelector('.pumpkin');
+const reaper = document.querySelector('.grim_reaper');
+const lineEight = document.querySelector('.line_eight');
+const start = document.querySelector('.start_area');
+const collision = document.querySelectorAll('.collision');
+const winModal = document.querySelector("#gameWinPopup");
+const loseModal = document.querySelector("#gameLosePopup");
+const winningDoor = document.querySelector('.winningSquare');
 
-let ghost = document.querySelector('.ghost');
-let pumpkin = document.querySelector('.pumpkin');
-let reaper = document.querySelector('.grim_reaper');
-let lineSeven = document.querySelector('.line_seven');
-
-let start = document.querySelector('.start_area');
-let collision = document.querySelectorAll('.collision');
-
-// Get the modal
-let winModal = document.querySelector("#gameWinPopup");
-let loseModal = document.querySelector("#gameLosePopup");
-
-// code to animate the obstacles
-let ghostMove = ghost.animate([
+//animation section, shouldnt be in function as consts need to be globally accessible
+const ghostMove = ghost.animate([
     {transform: 'translateY(0px)'},
     {transform: 'translateY(150px)'},
     {transform: 'translateY(0px)'}
 ], {
-// timing options
     duration: 3000,
     iterations: Infinity
 });
-ghostMove.pause()
+ghostMove.pause();
 
-let pumpkinMove = pumpkin.animate([
+const pumpkinMove = pumpkin.animate([
     {transform: 'translateX(0px)'},
     {transform: 'translateX(120px)'},
     {transform: 'translateX(0px)'},
     {transform: 'translateX(-140px)'},
     {transform: 'translateX(0px)'}
 ], {
-// timing options
     duration: 6000,
     iterations: Infinity
 });
-pumpkinMove.pause()
+pumpkinMove.pause();
 
-let reaperMove = reaper.animate([
+const reaperMove = reaper.animate([
     {transform: 'translateY(0px)'},
     {transform: 'translateY(100px)'},
     {transform: 'translateY(0px)'}
 ], {
-// timing options
     duration: 3000,
     iterations: Infinity
 });
-reaperMove.pause()
+reaperMove.pause();
 
 // code to make splash screen mouse hover
 function homeScreenGhost () {
@@ -56,11 +50,10 @@ function homeScreenGhost () {
             {transform: 'translateY(-60px)'},
             {transform: 'translateY(0px)'}
         ], {
-// timing options
             duration: 3000,
             iterations: Infinity
         });
-    })
+    });
 }
 
 homeScreenGhost();
@@ -68,39 +61,42 @@ homeScreenGhost();
 // code here to activate win modal displaying
 function win() {
     start.removeEventListener('mouseleave', runGame);
-    collision.forEach(() => {
-        this.removeEventListener('mouseenter', lose)
+    collision.forEach((item) => {
+        item.removeEventListener('mouseenter', lose);
     })
+    winningDoor.removeEventListener('mouseenter', win);
     winModal.style.display = "block";
     ghostMove.pause();
     pumpkinMove.pause();
-    reaperMove.pause();
+    reaperMove.cancel();
+    lineEight.removeEventListener('mouseleave',moveReaper);
 }
 
 // code here to activate lose modal displaying
-
 function lose() {
     start.removeEventListener('mouseleave', runGame);
-    collision.forEach(() => {
-        this.removeEventListener('mouseenter', lose)
-    })
+    collision.forEach((item) => {
+        item.removeEventListener('mouseenter', lose)
+    });
+    winningDoor.removeEventListener('mouseenter', win);
     loseModal.style.display = "block";
     ghostMove.pause();
     pumpkinMove.pause();
-    reaperMove.pause();
+    reaperMove.cancel();
+    lineEight.removeEventListener('mouseleave', moveReaper);
 }
 
 winModal.addEventListener('click', (e) => {
     e.stopPropagation();
     winModal.style.display = "none";
     start.addEventListener('mouseleave', runGame);
-})
+});
 
 loseModal.addEventListener('click', (e) => {
     e.stopPropagation();
     loseModal.style.display = "none";
     start.addEventListener('mouseleave', runGame);
-})
+});
 
 //event listener on the start button to make splashscreen disappear
 document.querySelector('.start-button').addEventListener('click', () => {
@@ -113,19 +109,22 @@ document.querySelector('.start-button').addEventListener('click', () => {
 function listenForCollisions() {
     collision.forEach(item => {
         item.addEventListener('mouseenter', lose);
-    })
+    });
 }
 
 //win if u get to Exit door (no timers yet)
 function listenForWinning() {
-    document.querySelector('.winningSquare').addEventListener('mouseenter', win);
+    winningDoor.addEventListener('mouseenter', win);
+}
+function moveReaper() {
+    reaperMove.play();
 }
 
-//call functions from here
+//call main function to start game from here
 function runGame() {
     ghostMove.play();
     pumpkinMove.play();
-    reaperMove.play();
     listenForCollisions();
     listenForWinning();
+    lineEight.addEventListener('mouseleave',moveReaper);
 }
