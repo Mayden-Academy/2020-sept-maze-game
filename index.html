@@ -13,34 +13,34 @@
     <div id="gameWinPopup" class="modal">
         <div id="WinPopUpContent" class="popUpContent">
             <h1>YOU WIN!</h1>
-            <p>You've won the game and can run free... unless you want to play again.</p>
-            <button class="endButton" id="closeWinModal">OK</button>
+            <p>You've won the game and can run free...unless you want to play again?</p>
+            <button class="endButton" id="closeWinModal">Restart</button>
         </div>
     </div>
 
     <div id="gameLosePopup" class="modal">
         <div id="LosePopUpContent" class="popUpContent">
             <h1>GAME OVER</h1>
-            <p>You've lost the game, and now you have to stay in the tomb for eternity... unless you play again.</p>
-            <button class="endButton" id="closeLoseModal">OK</button>
+            <p>You've lost the game, and now you have to stay in the tomb for eternity...unless you play again?</p>
+            <button class="endButton" id="closeLoseModal">Restart</button>
         </div>
     </div>
 
-    <div id="splash-main">
-        <div class="splash-heading"><h1>Jarver's Crypt</h1></div>
-        <div class="splash-outerbox">
-            <div class="splash-innerbox">
-                <img src="images/ghost.png" class="game-logo">
-                <button class="start-button">Start</button>
+    <div id="splashMain">
+        <div class="splashHeading"><h1>Jarver's Crypt</h1></div>
+        <div class="splashOuterbox">
+            <div class="splashInnerbox">
+                <img src="images/ghost.png" class="gameLogo">
+                <button class="startButton">Start</button>
             </div>
-            <div class="splash-innerbox">
+            <div class="splashInnerbox">
                 <h2 class="instructionsTitle">Instructions</h2>
                 <div class="instructionDetails">
                     <p>Oh no! You've been buried alive inside Jarver's Crypt!</p>
                     <p>Place your cursor on the coffin.</p>
                     <p>The game will begin once you leave the coffin square and enter the maze.</p>
                     <p>Navigate your escape along the path using your mouse. </p>
-                    <p>Don't let the wandering spirits grab you or you'll be trapped..... forever!</p>
+                    <p>Don't let the wandering spirits grab you or you'll be trapped...forever!</p>
                 </div>
             </div>
         </div>
@@ -49,24 +49,24 @@
   <div id="gameScreen">
     <h1>Jarver's Crypt</h1>
     <div class="gameBox">
-        <div class="start_area">
+        <div class="startArea">
             <h2>Start</h2>
             <img src="images/coffin.png" alt="a coffin">
         </div>
         <div class="maze collision"></div>
-        <div class="line vertical line_one thick"></div>
-        <div class="line horizontal line_two thick"></div>
-        <div class="line vertical line_three thick"></div>
-        <div class="line horizontal line_four thick"></div>
-        <div class="line vertical line_five thick"></div>
-        <div class="line horizontal line_six thin"></div>
-        <div class="line vertical line_seven thin"></div>
-        <div class="line horizontal line_eight thick"></div>
-        <div class="line horizontal line_nine thick"></div>
-        <div class="line vertical line_ten thick"></div>
-        <div class="line horizontal line_eleven"></div>
+        <div class="line vertical lineOne thick"></div>
+        <div class="line horizontal lineTwo thick"></div>
+        <div class="line vertical lineThree thick"></div>
+        <div class="line horizontal lineFour thick"></div>
+        <div class="line vertical lineFive thick"></div>
+        <div class="line horizontal lineSix thin"></div>
+        <div class="line vertical lineSeven thin"></div>
+        <div class="line horizontal lineEight thick grimReaperZone"></div>
+        <div class="line horizontal lineNine thick"></div>
+        <div class="line vertical lineTen thick"></div>
+        <div class="line horizontal lineEleven"></div>
 
-        <div class="finish_area">
+        <div class="finishArea">
             <img src="images/door.png" alt="finish door" class="winningSquare">
         </div>
         <div class="ghost collision">
@@ -78,7 +78,7 @@
         <div class="rock">
             <img src="images/rock.png" alt="rock">
         </div>
-        <div class="grim_reaper collision">
+        <div class="grimReaper collision">
             <img src="images/death.png" alt="grim reaper">
         </div>
         <div class="cross">

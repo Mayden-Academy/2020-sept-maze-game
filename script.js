@@ -1,103 +1,122 @@
-// Get the modal
-const winModal = document.querySelector("#gameWinPopup");
-const loseModal = document.querySelector("#gameLosePopup");
-
-//close the modal because there is no restart button
-document.querySelector('#closeLoseModal').addEventListener('click', () => {
-    loseModal.style.display = "none";
-})
-
-document.querySelector('#closeWinModal').addEventListener('click', () => {
-    winModal.style.display = "none";
-})
-
-//event listener on the start button to make splashscreen disappear
-document.querySelector('.start-button').addEventListener('click', () => {
-    document.querySelector('#splash-main').style.display = 'none';
-    document.querySelector('#gameScreen').style.display = 'block';
-});
-
-
-//listen for collisions with obstacles
-function listenForCollisions() {
-    document.querySelectorAll('.collision').forEach(item => {
-        item.addEventListener('mouseenter', (e) => {
-            // code here to activate lose modal displaying
-            loseModal.style.display = "block";
-            e.stopPropagation();
-        })
-    })
-}
-
-//win if u get to Exit door (no timers yet)
-function listenForWinning() {
-    document.querySelector('.winningSquare').addEventListener('mouseenter', (e) => {
-        // code here to activate win modal displaying
-        winModal.style.display = "block";
-        e.stopPropagation();
-    })
-}
-
-//call functions from here
-
 const ghost = document.querySelector('.ghost');
 const pumpkin = document.querySelector('.pumpkin');
-const reaper = document.querySelector('.grim_reaper');
-const lineSeven = document.querySelector('.line_seven');
+const reaper = document.querySelector('.grimReaper');
+const grimReaperZone = document.querySelector('.grimReaperZone');
+const start = document.querySelector('.startArea');
+const collision = document.querySelectorAll('.collision');
+const winModal = document.querySelector("#gameWinPopup");
+const loseModal = document.querySelector("#gameLosePopup");
+const winningDoor = document.querySelector('.winningSquare');
 
-const start = document.querySelector('.start_area');
+//animation section, shouldnt be in function as consts need to be globally accessible
+const ghostMove = ghost.animate([
+    {transform: 'translateY(0px)'},
+    {transform: 'translateY(150px)'},
+    {transform: 'translateY(0px)'}
+], {
+    duration: 3000,
+    iterations: Infinity
+});
+ghostMove.pause();
 
-start.addEventListener('mouseleave', (e) => {
+const pumpkinMove = pumpkin.animate([
+    {transform: 'translateX(0px)'},
+    {transform: 'translateX(120px)'},
+    {transform: 'translateX(0px)'},
+    {transform: 'translateX(-140px)'},
+    {transform: 'translateX(0px)'}
+], {
+    duration: 6000,
+    iterations: Infinity
+});
+pumpkinMove.pause();
+
+const reaperMove = reaper.animate([
+    {transform: 'translateY(0px)'},
+    {transform: 'translateY(100px)'},
+    {transform: 'translateY(0px)'}
+], {
+    duration: 3000,
+    iterations: Infinity
+});
+reaperMove.pause();
+
+// code to make splash screen ghost move on mouse hover of start button
+document.querySelector('.startButton').addEventListener('mouseover', (e) => {
     e.stopPropagation();
-    startAnimation();
-    listenForCollisions();
-    listenForWinning();
-})
-
-function startAnimation() {
-    ghost.animate([
+    document.querySelector('.gameLogo').animate([
         {transform: 'translateY(0px)'},
-        {transform: 'translateY(150px)'},
+        {transform: 'translateY(-60px)'},
         {transform: 'translateY(0px)'}
     ], {
         duration: 3000,
         iterations: Infinity
     });
-    pumpkin.animate([
-        {transform: 'translateX(0px)'},
-        {transform: 'translateX(120px)'},
-        {transform: 'translateX(0px)'},
-        {transform: 'translateX(-140px)'},
-        {transform: 'translateX(0px)'}
-    ], {
-        duration: 6000,
-        iterations: Infinity
+});
+
+function resetGame() {
+    start.removeEventListener('mouseleave', runGame);
+    collision.forEach((item) => {
+        item.removeEventListener('mouseenter', lose);
     });
-
-    lineSeven.addEventListener('mouseleave', (e) => {
-        reaper.animate([
-            {transform: 'translateY(0px)'},
-            {transform: 'translateY(100px)'},
-            {transform: 'translateY(0px)'}
-        ], {
-            duration: 3000,
-            iterations: Infinity
-        });
-    })
+    winningDoor.removeEventListener('mouseenter', win);
+    ghostMove.pause();
+    pumpkinMove.pause();
+    reaperMove.cancel();
+    grimReaperZone.removeEventListener('mouseleave', moveReaper);
 }
 
-function homeScreenGhost () {
-    document.querySelector('.start-button').addEventListener('mouseover', (e) => {
-        e.stopPropagation()
-        document.querySelector('.game-logo').animate([
-            {transform: 'translateY(0px)'},
-            {transform: 'translateY(-60px)'},
-            {transform: 'translateY(0px)'}
-        ], {
-            duration: 3000,
-            iterations: Infinity
-        });
-    })
+// code here to activate win modal displaying
+function win() {
+    winModal.style.display = "block";
+    resetGame();
 }
 
-homeScreenGhost();
+// code here to activate lose modal displaying
+function lose() {
+    loseModal.style.display = "block";
+    resetGame();
+}
+
+winModal.addEventListener('click', (e) => {
+    e.stopPropagation();
+    winModal.style.display = "none";
+    start.addEventListener('mouseleave', runGame);
+});
+
+loseModal.addEventListener('click', (e) => {
+    e.stopPropagation();
+    loseModal.style.display = "none";
+    start.addEventListener('mouseleave', runGame);
+});
+
+//event listener on the start button to make splashscreen disappear
+document.querySelector('.startButton').addEventListener('click', () => {
+    document.querySelector('#splashMain').style.display = 'none';
+    document.querySelector('#gameScreen').style.display = 'block';
+    start.addEventListener('mouseleave', runGame);
+})
+
+//listen for collisions with obstacles
+function listenForCollisions() {
+    collision.forEach(item => {
+        item.addEventListener('mouseenter', lose);
+    });
+}
+
+//win if u get to Exit door (no timers yet)
+function listenForWinning() {
+    winningDoor.addEventListener('mouseenter', win);
+}
+function moveReaper() {
+    reaperMove.play();
+}
+
+//call main function to start game from here
+function runGame() {
+    ghostMove.play();
+    pumpkinMove.play();
+    listenForCollisions();
+    listenForWinning();
+    grimReaperZone.addEventListener('mouseleave',moveReaper);
+}
