@@ -42,7 +42,7 @@ const reaperMove = reaper.animate([
 reaperMove.pause();
 
 // code to make splash screen mouse hover
-function homeScreenGhost () {
+function addSplashScreenGhostAnimation() {
     document.querySelector('.start-button').addEventListener('mouseover', (e) => {
         e.stopPropagation();
         document.querySelector('.game-logo').animate([
@@ -56,7 +56,7 @@ function homeScreenGhost () {
     });
 }
 
-homeScreenGhost();
+addSplashScreenGhostAnimation();
 
 // code here to activate win modal displaying
 function win() {
