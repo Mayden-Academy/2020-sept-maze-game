@@ -360,6 +360,6 @@ html, body {
     top: 15px;
 }
 
-#timer p {
+#timerDisplay {
     margin: 0;
 }
