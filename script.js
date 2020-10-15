@@ -186,7 +186,7 @@ function startTimer(duration, element) {
 
         document.querySelector('.finish_area').addEventListener('mouseenter', ()=>{
             clearInterval(timer);
-            console.log('youve won');
+            console.log('you won');
         })
     }, 1000)
 }
