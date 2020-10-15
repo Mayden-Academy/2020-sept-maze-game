@@ -30,13 +30,14 @@ html, body {
     width: 800px;
     margin: 0 auto;
     padding: 20px;
+    letter-spacing: 1rem;
 }
 
 .gameBox {
     margin: 0 auto;
     width: 800px;
     position: relative;
-    background-color: #bc5f04;
+    background-color: #66462D;
 }
 
 /* need to keep this class with set height otherwise it stops collisions with walls being detected, fyi adding set height to its parent gameBox doesnt help */
@@ -66,7 +67,7 @@ html, body {
 }
 
 .line {
-    background-color: #2b0504;
+    background-color: #977457;
     position: absolute;
     cursor: url("images/charPointer.png"), pointer;
 }
@@ -250,7 +251,7 @@ html, body {
     padding-top: 20px;
     font-size: 4rem;
     font-family: "Creepster";
-    letter-spacing: 3px;
+    letter-spacing: 1rem;
 }
 
 .splashOuterbox {
@@ -288,13 +289,14 @@ html, body {
 .instructionsTitle {
     font-family: "Creepster";
     font-weight: normal;
-    letter-spacing: 3px;
+    letter-spacing: 0.5rem;
     font-size: 3rem;
 }
 
 .instructionDetails {
     font-size: 1.5rem;
     font-family: "Fredericka the Great";
+    letter-spacing: 0.2rem;
 }
 
 .modal {
@@ -329,6 +331,7 @@ html, body {
     font-size: 1.5rem;
     font-family: "Fredericka the Great";
     padding: 20px;
+    letter-spacing: 0.2rem;
 }
 
 .popUpContent h1 {
@@ -336,6 +339,7 @@ html, body {
     font-size: 3rem;
     font-family: "Creepster";
     margin-bottom: 0px;
+    letter-spacing: 0.5rem;
 }
 
 .endButton {
