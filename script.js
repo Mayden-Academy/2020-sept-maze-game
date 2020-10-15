@@ -2,7 +2,7 @@
 let ghost = document.querySelector('.ghost');
 let pumpkin = document.querySelector('.pumpkin');
 let reaper = document.querySelector('.grim_reaper');
-let lineSeven = document.querySelector('.line_seven');
+let lineEight = document.querySelector('.line_eight');
 
 let start = document.querySelector('.start_area');
 let collision = document.querySelectorAll('.collision');
@@ -127,7 +127,7 @@ function runGame() {
     pumpkinMove.play();
     listenForCollisions();
     listenForWinning();
-    lineSeven.addEventListener('mouseleave',() => {
+    lineEight.addEventListener('mouseleave',() => {
        reaperMove.play();
     })
 }
