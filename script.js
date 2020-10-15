@@ -21,7 +21,7 @@ let ghostMove = ghost.animate([
     duration: 3000,
     iterations: Infinity
 });
-ghostMove.pause()
+ghostMove.pause();
 
 let pumpkinMove = pumpkin.animate([
     {transform: 'translateX(0px)'},
@@ -34,7 +34,7 @@ let pumpkinMove = pumpkin.animate([
     duration: 6000,
     iterations: Infinity
 });
-pumpkinMove.pause()
+pumpkinMove.pause();
 
 let reaperMove = reaper.animate([
     {transform: 'translateY(0px)'},
@@ -45,7 +45,7 @@ let reaperMove = reaper.animate([
     duration: 3000,
     iterations: Infinity
 });
-reaperMove.pause()
+reaperMove.pause();
 
 // code to make splash screen mouse hover
 function homeScreenGhost () {
@@ -60,7 +60,7 @@ function homeScreenGhost () {
             duration: 3000,
             iterations: Infinity
         });
-    })
+    });
 }
 
 homeScreenGhost();
@@ -70,7 +70,7 @@ function win() {
     start.removeEventListener('mouseleave', runGame);
     collision.forEach(() => {
         this.removeEventListener('mouseenter', lose)
-    })
+    });
     winModal.style.display = "block";
     ghostMove.pause();
     pumpkinMove.pause();
@@ -83,7 +83,7 @@ function lose() {
     start.removeEventListener('mouseleave', runGame);
     collision.forEach(() => {
         this.removeEventListener('mouseenter', lose)
-    })
+    });
     loseModal.style.display = "block";
     ghostMove.pause();
     pumpkinMove.pause();
@@ -94,13 +94,13 @@ winModal.addEventListener('click', (e) => {
     e.stopPropagation();
     winModal.style.display = "none";
     start.addEventListener('mouseleave', runGame);
-})
+});
 
 loseModal.addEventListener('click', (e) => {
     e.stopPropagation();
     loseModal.style.display = "none";
     start.addEventListener('mouseleave', runGame);
-})
+});
 
 //event listener on the start button to make splashscreen disappear
 document.querySelector('.start-button').addEventListener('click', () => {
@@ -113,7 +113,7 @@ document.querySelector('.start-button').addEventListener('click', () => {
 function listenForCollisions() {
     collision.forEach(item => {
         item.addEventListener('mouseenter', lose);
-    })
+    });
 }
 
 //win if u get to Exit door (no timers yet)
@@ -129,5 +129,5 @@ function runGame() {
     listenForWinning();
     lineEight.addEventListener('mouseleave',() => {
        reaperMove.play();
-    })
+    });
 }
