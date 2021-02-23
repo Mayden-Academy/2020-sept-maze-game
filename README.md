@@ -3,7 +3,7 @@
 ## About
 This is a maze game built using JavaScript while working as part of an scrum team. 
 
-It was designed for a a laptop/desktop with a mouse, rather than a touch screen device
+It was designed for a laptop/desktop with a mouse, rather than a touch screen device
 
 ## Live Demo
 This game is live and can be played here - https://dev.io-academy.uk/projects/2020-sept/2020-sept-maze-game/
